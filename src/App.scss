@@ -9,132 +9,131 @@ body {
   font-family: monospace;
   font-size: 14px;
   margin: 0px;
- }
- * {
+}
+* {
   box-sizing: border-box;
- }
- article {
+}
+article {
   background-color: var(--dkgrey);
   background-image: repeating-linear-gradient(hsla(204, 2%, 43%, .1),	hsla(204, 2%, 43%,.1) 1px, transparent 1px, transparent 4px);
- }
- h2{
+}
+h2{
   position: absolute;
   z-index: -20;
- }
- 
- #navbar {
+}
+
+#navbar {
   position: fixed;
   top: 0;
   z-index: 1;
   padding: 0 20px 7px 20px;
   width: 100vw;
-  //height: 46px;
-  
+
   background-color: hsla(206, 9%, 15%, .8);
-  
+
   ul {
-   list-style: none;
-   display: flex;
-   
-   padding: 0px;
-   margin: 0px;
+    list-style: none;
+    display: flex;
+
+    padding: 0px;
+    margin: 0px;
   }
   li {
-   display: inline-block;
-   margin: 0px;
-   padding: 0px;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
   }
   a {
-   display: inline-block;
-   text-decoration: none;
-   background: var(--dkgrey);
-   color: var(--ltgreen);
-   padding: 10px 20px;
-   margin-right: 7px;
-   border-right: 2px solid var(--ltgreen);
-   border-left: 2px solid var(--ltgreen);
-   border-bottom: 2px solid var(--ltgreen);
+    display: inline-block;
+    text-decoration: none;
+    background: var(--dkgrey);
+    color: var(--ltgreen);
+    padding: 10px 20px;
+    margin-right: 7px;
+    border-right: 2px solid var(--ltgreen);
+    border-left: 2px solid var(--ltgreen);
+    border-bottom: 2px solid var(--ltgreen);
   }
   a:hover, a:focus {
-   background-color: var(--dkgreen);
-   color: white;
-   box-shadow: inset 1px 1px 5px var(--dkgrey);
+    background-color: var(--dkgreen);
+    color: white;
+    box-shadow: inset 1px 1px 5px var(--dkgrey);
   }
- }
- #a-welcome {
+}
+#a-welcome {
   color:white;
   font-weight:bold;
- }
- 
- #welcome-section {
+}
+
+#welcome-section {
   box-sizing: border-box;
   height: 100vh;
   width: 75%;
   margin: 0px auto;
- }
- #welcome-grid {
+}
+#welcome-grid {
   height: 100%;
   margin: 0px;
   padding: 0px;
   display: grid;
   grid-template:
-   "greet greet name ."
-   ". tagline tagline tagline";
+    "greet greet name ."
+    ". tagline tagline tagline";
   grid-gap: 5px;
-  
+
   span {
-   display: inline-block;
-   text-align: center;
+    display: inline-block;
+    text-align: center;
   }
- }
- #name {
+}
+#name {
   font-size: 45px;
   margin: 0px;
   padding: 10px 0px;
   text-align: center;
   grid-area: name;
   align-self: end;
- 
+
   background: var(--ltgrey);
   color: var(--dkgrey);
- }
- #greeting {
+}
+#greeting {
   font-size: 20vh;
   grid-area: greet;
   align-self: end;
-  
+
   background: var(--ltgreen);
   color: var(--dkgrey);
- }
- #tagline {
+}
+#tagline {
   padding: 10px 0px;
   font-weight: bold;
   font-size: 20px;
   grid-area: tagline;
   align-self: start;
-  
+
   background: var(--dkgreen);
   color: var(--dkgrey);
- }
- 
- #projects {
+}
+
+#projects {
   min-height: 100vh;
   background-color: var(--dkgreen);
   background-image: repeating-linear-gradient(hsla(85, 59%, 48%, .1),	hsla(85, 59%, 48%,.1) 1px, transparent 1px, transparent 4px);
   padding: 50px 10px 10px 10px;
- }
- .proj-flex {
+}
+.proj-flex {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  
+
   a {
-   text-decoration: none;
-   border-radius: 50%;
+    text-decoration: none;
+    border-radius: 50%;
   }
- }
- .project-tile {
+}
+.project-tile {
   background-position: center;
   background-size: auto 300px;
   background-repeat: no-repeat;
@@ -148,87 +147,91 @@ body {
   z-index: 0;
   text-align: center;
   vertical-align: center;
-  
+
   span {
-   display: inline-block;
-   width: 280px;
-   margin: 80% auto auto auto;
-   padding: 10px;
-   background-color: var(--dkgrey);
-   color: var(--ltgreen);
-   font-weight: bold;
+    display: inline-block;
+    width: 280px;
+    margin: 80% auto auto auto;
+    padding: 10px;
+    background-color: var(--dkgrey);
+    color: var(--ltgreen);
+    font-weight: bold;
   }
- }
- .project-tile:hover {
+}
+.project-tile:hover {
   border-color: var(--mdgrey);
- }
- 
- footer {
+}
+
+footer {
   padding: 15px 10px;
   height: auto;
- 
+
   a {
-   display: inline-block;
-   margin: 5px 10px;
-   text-decoration: none;
-   color: var(--ltgreen);
+    display: inline-block;
+    margin: 5px 10px;
+    text-decoration: none;
+    color: var(--ltgreen);
   }
   a::before {
-   content: "{ ";
+    content: "{ ";
   }
   a::after {
-   content: " }";
+    content: " }";
   }
- }
- 
- // re-arrange welcome section
- @media only screen and (max-width: 650px){
-   #welcome-grid {
+}
+
+// re-arrange welcome section
+@media only screen and (max-width: 650px){
+  #welcome-grid {
     grid-template:
-     "."
-     "greet"
-     "."
-     "name"
-     "tagline";
+      "."
+      "greet"
+      "."
+      "name"
+      "tagline";
     grid-template-rows: .25fr auto .25fr auto auto;
     align-content: center;
   }
- }
- 
- // Adjust Navbar 
- @media only screen and (max-width: 500px){
+}
+
+// Adjust Navbar 
+@media only screen and (max-width: 500px){
   #navbar {
-   border-bottom: 1px solid var(--dkgreen);
-   width: 100vh;
-   height: 25px;
-   right: 100vw;
-   transform: rotate(-90deg);
-   transform-origin: 100% 0;
-  
-   ul {
-    width: 100%;
-    flex-flow: row-reverse nowrap;
-    justify-items: flex-end;
-   }
-   a {
-    position: relative;
-    top: -5px;
-   }
-   a:hover, a:focus {
-    padding-top: 20px;
-   }
+    border-bottom: 1px solid var(--dkgreen);
+    width: 100vh;
+    height: 25px;
+    right: 100vw;
+    transform: rotate(-90deg);
+    transform-origin: 100% 0;
+
+    ul {
+      width: 100%;
+      flex-flow: row-reverse nowrap;
+      justify-items: flex-end;
+    }
+    a {
+      position: relative;
+      top: -5px;
+    }
+    a:hover, a:focus {
+      padding-top: 20px;
+    }
   }
-  
-  #projects, #skills { padding-left: 30px; }
-  footer { padding-left: 30px; }
- }
- 
- // Re-size welcome section text 
- @media only screen and (max-width: 380px){
+
+  #projects, #skills {
+    padding-left: 30px;
+  }
+  footer {
+    padding-left: 30px;
+  }
+}
+
+// Re-size welcome section text 
+@media only screen and (max-width: 380px){
   #name {
-   font-size: 30px;
+    font-size: 30px;
   }
   #tagline {
-   font-size: 10px;
+    font-size: 10px;
   }
- }
+}
