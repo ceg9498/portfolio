@@ -200,7 +200,7 @@ body {
   #navbar {
    border-bottom: 1px solid var(--dkgreen);
    width: 100vh;
-   height: 40px;
+   height: 25px;
    right: 100vw;
    transform: rotate(-90deg);
    transform-origin: 100% 0;
@@ -212,15 +212,10 @@ body {
    }
    a {
     position: relative;
-    top: 7px;
+    top: -5px;
    }
    a:hover, a:focus {
-    top: 13px;
-   }
-   #projects:target {
-    #a-proj {
-     top: 13px;
-    }
+    padding-top: 20px;
    }
   }
   
