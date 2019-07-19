@@ -1,19 +1,19 @@
 import React from 'react'
 
 export function Navbar(){
-return(
-<nav id="navbar">
-  <ul role="navigation">
-   <li>
-    <a href="#welcome-section" id="a-welcome">Emily&nbsp;Gagne</a>
-   </li><li>
-    <a href="#projects" id="a-proj">Projects</a>
-   </li><li>
-    <a href="#profile-link">Connect</a>
-   </li>
-  </ul>
- </nav>
- );
+  return(
+    <nav id="navbar">
+      <ul role="navigation">
+        <li>
+          <a href="#welcome-section" id="a-welcome">Emily&nbsp;Gagne</a>
+        </li><li>
+          <a href="#projects" id="a-proj">Projects</a>
+        </li><li>
+          <a href="#profile-link">Connect</a>
+        </li>
+      </ul>
+    </nav>
+  );
 }
 
 export function Welcome(){
@@ -59,17 +59,3 @@ export function Footer(){
     </footer>
   );
 }
-
-/* 
-   
-   <a href="https://codepen.io/ceg9498/full/ewzJrr">
-    <div className="project-tile" style="background-image:url('https://i.imgur.com/AFWxD1W.png')">
-     <span>Survey Form</span>
-    </div>
-   </a>
-   
-   <a href="https://codepen.io/ceg9498/full/pXbrqp">
-    <div className="project-tile" style="background-image:url('https://i.imgur.com/ZJ92yGh.png')">
-     <span>Tech Doc Page</span>
-    </div>
-   </a> */
