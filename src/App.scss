@@ -118,7 +118,7 @@ body {
  }
  
  #projects {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--dkgreen);
   background-image: repeating-linear-gradient(hsla(85, 59%, 48%, .1),	hsla(85, 59%, 48%,.1) 1px, transparent 1px, transparent 4px);
   padding: 50px 10px 10px 10px;
