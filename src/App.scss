@@ -1,11 +1,12 @@
+$dkgreen: #61892F;
+$ltgreen: #86C232;
+$dkgrey: #222629;
+$mdgrey: #474B4F;
+$ltgrey: #6B6E70;
+
 body {
-  --dkgreen: #61892F;
-  --ltgreen: #86C232;
-  --dkgrey: #222629;
-  --mdgrey: #474B4F;
-  --ltgrey: #6B6E70;
-  background-color: var(--dkgrey);
-  color: var(--ltgreen);
+  background-color: $dkgrey;
+  color: $ltgreen;
   font-family: monospace;
   font-size: 14px;
   margin: 0px;
@@ -14,7 +15,7 @@ body {
   box-sizing: border-box;
 }
 article {
-  background-color: var(--dkgrey);
+  background-color: $dkgrey;
   background-image: repeating-linear-gradient(hsla(204, 2%, 43%, .1),	hsla(204, 2%, 43%,.1) 1px, transparent 1px, transparent 4px);
 }
 h2{
@@ -46,18 +47,18 @@ h2{
   a {
     display: inline-block;
     text-decoration: none;
-    background: var(--dkgrey);
-    color: var(--ltgreen);
+    background: $dkgrey;
+    color: $ltgreen;
     padding: 10px 20px;
     margin-right: 7px;
-    border-right: 2px solid var(--ltgreen);
-    border-left: 2px solid var(--ltgreen);
-    border-bottom: 2px solid var(--ltgreen);
+    border-right: 2px solid $ltgreen;
+    border-left: 2px solid $ltgreen;
+    border-bottom: 2px solid $ltgreen;
   }
   a:hover, a:focus {
-    background-color: var(--dkgreen);
+    background-color: $dkgreen;
     color: white;
-    box-shadow: inset 1px 1px 5px var(--dkgrey);
+    box-shadow: inset 1px 1px 5px $dkgrey;
   }
 }
 #a-welcome {
@@ -94,16 +95,16 @@ h2{
   grid-area: name;
   align-self: end;
 
-  background: var(--ltgrey);
-  color: var(--dkgrey);
+  background: $ltgrey;
+  color: $dkgrey;
 }
 #greeting {
   font-size: 20vh;
   grid-area: greet;
   align-self: end;
 
-  background: var(--ltgreen);
-  color: var(--dkgrey);
+  background: $ltgreen;
+  color: $dkgrey;
 }
 #tagline {
   padding: 10px 0px;
@@ -112,13 +113,13 @@ h2{
   grid-area: tagline;
   align-self: start;
 
-  background: var(--dkgreen);
-  color: var(--dkgrey);
+  background: $dkgreen;
+  color: $dkgrey;
 }
 
 #projects {
   min-height: 100vh;
-  background-color: var(--dkgreen);
+  background-color: $dkgreen;
   background-image: repeating-linear-gradient(hsla(85, 59%, 48%, .1),	hsla(85, 59%, 48%,.1) 1px, transparent 1px, transparent 4px);
   padding: 50px 10px 10px 10px;
 }
@@ -141,9 +142,9 @@ h2{
   width: 300px;
   height: 300px;
   margin: 8px;
-  border: 10px solid var(--dkgrey);
+  border: 10px solid $dkgrey;
   border-radius: 50%;
-  box-shadow: 1px 1px 3px var(--mdgrey);
+  box-shadow: 1px 1px 3px $mdgrey;
   z-index: 0;
   text-align: center;
   vertical-align: center;
@@ -153,13 +154,13 @@ h2{
     width: 280px;
     margin: 80% auto auto auto;
     padding: 10px;
-    background-color: var(--dkgrey);
-    color: var(--ltgreen);
     font-weight: bold;
+    background-color: $dkgrey;
+    color: $ltgreen;
   }
 }
 .project-tile:hover {
-  border-color: var(--mdgrey);
+  border-radius: 10px;
 }
 
 footer {
@@ -170,7 +171,7 @@ footer {
     display: inline-block;
     margin: 5px 10px;
     text-decoration: none;
-    color: var(--ltgreen);
+    color: $ltgreen;
   }
   a::before {
     content: "{ ";
@@ -197,7 +198,7 @@ footer {
 // Adjust Navbar 
 @media only screen and (max-width: 500px){
   #navbar {
-    border-bottom: 1px solid var(--dkgreen);
+    border-bottom: 1px solid $dkgreen;
     width: 100vh;
     height: 25px;
     right: 100vw;
