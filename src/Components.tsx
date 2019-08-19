@@ -24,7 +24,7 @@ export function Welcome(){
     <header id="welcome-section">
       <h1 id="welcome-grid">
         <span id="greeting">Hi!</span>
-        <span id="name"><Popup title="I'm Emily." content="Some description text" /></span>
+        <span id="name">I'm Emily.</span>
         <span id="tagline">It's nice to meet you.</span>
       </h1>
     </header>
