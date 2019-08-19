@@ -144,14 +144,16 @@ h2{
   height: 300px;
   margin: 8px;
   border: 10px solid $dkgrey;
-  border-radius: 50%;
+  border-radius: 50% 50% 5px 5px;
   box-shadow: 1px 1px 3px $mdgrey;
   vertical-align: center;
 
   .project-tile-info {
     display: inline-block;
-    width: 280px;
-    margin: 80% auto auto auto;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    width: 300px;
     padding: 10px;
     background-color: $dkgrey;
     color: $ltgreen;
