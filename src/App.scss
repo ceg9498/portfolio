@@ -177,25 +177,26 @@ h2{
         box-sizing: border-box;
         padding: 5px;
         max-width: 300px;
+        height: 45px;
         flex-grow: 1;
         border-top: 2px solid $ltgrey;
         border-right: 2px solid $ltgrey;
         color: white;
-        background-color: change-color($color: $dkgrey, $alpha: 0.75);
+        background-color: $dkgrey;
         border-radius: 0;
       }
       a:active {
         color: white;
       }
       a:first-child {
-        border-radius: 0 0 0 10px;
+        border-radius: 0 0 0 5px;
       }
       a:last-child {
-        border-radius: 0 0 10px 0;
+        border-radius: 0 0 5px 0;
         border-right: none;
       }
       a:only-child {
-        border-radius: 0 0 10px 10px;
+        border-radius: 0 0 5px 5px;
         border-right: none;
       }
     }
@@ -211,7 +212,7 @@ h2{
   margin: 0;
   height: 300px;
   width: 300px;
-  border-radius: 10px;
+  border-radius: 25px 25px 5px 5px;
   background-color: change-color($color: $dkgrey, $alpha: 0.9);
   box-shadow: 1px 1px 3px $mdgrey;
 
