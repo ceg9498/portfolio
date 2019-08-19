@@ -135,6 +135,7 @@ h2{
   }
 }
 .project-tile {
+  position: relative;
   background-position: center;
   background-size: auto 300px;
   background-repeat: no-repeat;
@@ -145,22 +146,78 @@ h2{
   border: 10px solid $dkgrey;
   border-radius: 50%;
   box-shadow: 1px 1px 3px $mdgrey;
-  z-index: 0;
-  text-align: center;
   vertical-align: center;
 
-  span {
+  .project-tile-info {
     display: inline-block;
     width: 280px;
     margin: 80% auto auto auto;
     padding: 10px;
-    font-weight: bold;
     background-color: $dkgrey;
     color: $ltgreen;
+    border-radius: 5px;
+
+    .project-tile-title {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .project-tile-links {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      a {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 5px;
+        max-width: 300px;
+        flex-grow: 1;
+        border-top: 2px solid $ltgrey;
+        border-right: 2px solid $ltgrey;
+        color: white;
+        background-color: change-color($color: $dkgrey, $alpha: 0.75);
+        border-radius: 0;
+      }
+      a:active {
+        color: white;
+      }
+      a:first-child {
+        border-radius: 0 0 0 10px;
+      }
+      a:last-child {
+        border-radius: 0 0 10px 0;
+        border-right: none;
+      }
+      a:only-child {
+        border-radius: 0 0 10px 10px;
+        border-right: none;
+      }
+    }
   }
 }
 .project-tile:hover {
+  box-shadow: none;
+}
+.project-tile:hover .project-tile-info {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  margin: 0;
+  height: 300px;
+  width: 300px;
   border-radius: 10px;
+  background-color: change-color($color: $dkgrey, $alpha: 0.9);
+  box-shadow: 1px 1px 3px $mdgrey;
+
+  .project-tile-title {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $ltgreen;
+  }
 }
 
 footer {

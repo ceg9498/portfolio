@@ -1,0 +1,24 @@
+$dkgrey: #222629;
+$ltgrey: #6B6E70;
+
+.popup {
+    position: relative;
+}
+
+.popup-label{
+    cursor:pointer;
+}
+
+.popup-content {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    background-color: $dkgrey;
+    border: 1px solid $ltgrey;
+    padding: 5px 15px 5px 5px;
+    border-radius: 4px;
+    z-index: 100;
+    font-size: 14px;
+}

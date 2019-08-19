@@ -3,6 +3,8 @@
   "version": "0.2.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.10.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "@types/jest": "24.0.15",
     "@types/node": "12.6.8",
     "@types/react": "16.8.23",
@@ -38,6 +40,7 @@
   },
   "homepage": "https://ceg9498.github.io/portfolio/",
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "1.2.0-7",
     "gh-pages": "^2.0.1"
   }
 }
