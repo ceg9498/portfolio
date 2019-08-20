@@ -41,7 +41,7 @@ export default class MDPreviewer extends React.Component<any,any>{
     <>
      <h1><span id="md">Markdown</span> <span id="previewer">Previewer</span></h1>
      <div id="container">
-      <textarea id="editor" onChange={(e)=>this.handleChange(e)}>{this.state.markdown}</textarea>
+      <textarea id="editor" onChange={(e)=>this.handleChange(e)} value={this.state.markdown}></textarea>
       <div id="preview" dangerouslySetInnerHTML={this.markup()} />
      </div>
     </>
