@@ -1,0 +1,89 @@
+$royal-blue: #03256C;
+$denim-blue: #2541B2;
+$green-blue: #1768AC;
+$cyan: #06BEE1;
+
+@font-face {
+  font-family: "Digital";
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff") format("woff"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7") format("svg");
+}
+
+body {
+ background-color: $royal-blue;
+ color: white;
+ margin: 0;
+ font-family: Comfortaa, sans-serif;
+}
+
+#root {
+ box-sizing: border-box;
+ display: grid;
+ place-items: center;
+}
+
+h1 {
+ font-size: 50px;
+}
+
+.time-text {
+ font-family: digital, monospace;
+}
+button {
+ background-color: $denim-blue;
+ border: none;
+ color: white;
+}
+
+#start_stop, #reset {
+ padding: 10px;
+ border-radius: 5px;
+ margin-left: 5px;
+}
+#timer-label {
+ font-size: 30px;
+}
+#timer-label, #session-label, #break-label {
+ text-transform: capitalize;
+}
+#time-left {
+ font-size: 108px;
+ background-color: $green-blue;
+ padding: 10px 20px;
+ margin: 5px 0 10px 0;
+ border-radius: 10px;
+}
+
+// Timer settings
+#settings {
+ position: fixed;
+ bottom: 0px;
+ width: 100%;
+ height: 75px;
+ background-color: $denim-blue;
+ display: flex;
+ justify-content: center;
+}
+.setTimer {
+ font-size: 30px;
+ display: inline-block;
+ position: relative;
+ margin: 5px 20px;
+ .time-text {
+  font-size: 40px;
+ }
+ button {
+  font-size: 20px;
+  position: relative;
+  width: 30px;
+  height: 20px;
+ }
+ .incr {
+  top: -14px;
+  left: 5px;
+ }
+ .decr {
+  top: 5px;
+  left: -25px;
+ }
+}
