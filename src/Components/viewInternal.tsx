@@ -6,42 +6,78 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Quotes from '../Examples/quoteMachine'
 import MDPreviewer from '../Examples/markdownPreviewer'
 
-export default function Example(props:any){
-  console.log("Example is loaded")
-  return(
-    <div id="inline-viewport">
-      <div id="inline-header">
-        <h3>{props.proj.title}</h3>
-        <span id="gap"></span>
-        <span id="inline-close" onClick={props.close}>
-          <FontAwesomeIcon icon={faTimesCircle} />
-        </span>
-      </div>
-      <div id="inline-content">{GetView(props.proj.inLink)}</div>
-    </div>
-  );
-}
+export default class Example extends React.Component<any,any>{
+  projects;
+  constructor(props:any){
+    super(props);
+    this.state = {}
+    this.projects = [
+      {
+        name: "Quote Machine",
+        id: "quoteMachine",
+      },
+      {
+        name: "Tech Doc Page",
+        id: "techDocPage",
+      },
+      {
+        name: "Pomodoro Timer",
+        id: "pomodoroTimer",
+      },
+      {
+        name: "Markdown Previewer",
+        id: "markdownPreviewer",
+      },
+      {
+        name: "JavaScript Calculator",
+        id: "jsCalculator",
+      }
+    ];
 
-function GetView(link:string){
-  let view;
-  switch(link){
-    case "quoteMachine":
-      view = <Quotes />;
-      break;
-    case "techDocPage":
-      // view = < />;
-      break;
-    case "pomodoroTimer":
-      // view = < />;
-      break;
-    case "markdownPreviewer":
-      view = <MDPreviewer />;
-      break;
-    case "jsCalculator":
-      // view = < />;
-      break;
-    default:
-      console.error("No such view available. View: " + link)
+    this.SetView = this.SetView.bind(this);
   }
-  return view;
+  componentWillMount(){
+    this.SetView(this.props.proj.inLink);
+  }
+  
+  SetView(link:string){
+    let nView;
+    switch(link){
+      case "quoteMachine":
+        nView = <Quotes />;
+        break;
+      case "techDocPage":
+        // nView = < />;
+        break;
+      case "pomodoroTimer":
+        // nView = < />;
+        break;
+      case "markdownPreviewer":
+        nView = <MDPreviewer />;
+        break;
+      case "jsCalculator":
+        // nView = < />;
+        break;
+      default:
+        console.error("No such view available. View: " + link)
+    }
+    this.setState({
+      view: nView
+    })
+  }
+
+  render(){
+    return(
+      <div id="inline-viewport">
+        <div id="inline-header">
+          <h3>{this.props.proj.title}</h3>
+          <span id="gap"></span>
+          <span id="inline-close" onClick={this.props.close}>
+            <FontAwesomeIcon icon={faTimesCircle} />
+          </span>
+        </div>
+        <div id="inline-content">{this.state.view}</div>
+      </div>
+    );
+  }
 }

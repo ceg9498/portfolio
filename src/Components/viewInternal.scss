@@ -25,7 +25,7 @@ $dkgrey: #222629;
   grid-area: inlineHeader;
   display: flex;
   border-bottom: 2px solid $ltgreen;
-  
+
   h3 {
     margin: 0;
     height: 100%;
@@ -34,7 +34,6 @@ $dkgrey: #222629;
     padding: 10px 20px;
     border-right: 2px solid $ltgreen;
   }
-
   #gap {
     flex-grow: 1;
   }
@@ -48,7 +47,7 @@ $dkgrey: #222629;
     background-color: $dkgrey;
   }
 
-  #inline-close:hover, h3:hover {
+  #inline-close:hover {
     background-color: $dkgreen;
     color: white;
     box-shadow: inset 1px 1px 5px $dkgrey;
