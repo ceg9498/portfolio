@@ -5,6 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Quotes from '../Examples/quoteMachine'
 import MDPreviewer from '../Examples/markdownPreviewer'
+//import TechDocPage from '../Examples/techDocPage'
+
+var tdp = '../Examples/techDocPage.html'
 
 export default class Example extends React.Component<any,any>{
   projects;
@@ -47,7 +50,7 @@ export default class Example extends React.Component<any,any>{
         nView = <Quotes />;
         break;
       case "techDocPage":
-        // nView = < />;
+        nView = <iframe src={tdp} title="tech-doc-page" name="tech-doc-page"></iframe>
         break;
       case "pomodoroTimer":
         // nView = < />;
