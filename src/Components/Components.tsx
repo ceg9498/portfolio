@@ -1,7 +1,7 @@
 import React from 'react'
 import { faEye, faExternalLinkSquareAlt, faCode, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Popup from './Components/popup'
+import Popup from './popup'
 
 export function Navbar(){
   return(

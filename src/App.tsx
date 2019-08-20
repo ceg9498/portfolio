@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Welcome, ProjectSection, Footer } from './Components'
+import { Navbar, Welcome, ProjectSection, Footer } from './Components/Components'
 import './App.scss';
 
 const App: React.FC = () => {
