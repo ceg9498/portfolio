@@ -1,0 +1,64 @@
+$dkgreen: #61892F;
+$ltgreen: #86C232;
+$dkgrey: #222629;
+
+#inline-viewport {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: change-color($color: black, $alpha: .75);
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  padding: 0 2vw 5vh 2vw;
+  z-index: 100;
+  display: grid;
+  grid-template: "inlineHeader" "inlineContent";
+  grid-template-rows: 50px 1fr;
+}
+#inline-header {
+  padding: 0;
+  height: 50px;
+  width: 100%;
+  background-color: hsla(206, 9%, 15%, .8);
+  color: $ltgreen;
+  grid-area: inlineHeader;
+  display: flex;
+  border-bottom: 2px solid $ltgreen;
+  
+  h3 {
+    margin: 0;
+    height: 100%;
+    display: inline-block;
+    background-color: $dkgrey;
+    padding: 10px 20px;
+    border-right: 2px solid $ltgreen;
+  }
+
+  #gap {
+    flex-grow: 1;
+  }
+  
+  #inline-close {
+    display: inline-block;
+    border-left: 2px solid $ltgreen;
+    color: $ltgreen;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: $dkgrey;
+  }
+
+  #inline-close:hover, h3:hover {
+    background-color: $dkgreen;
+    color: white;
+    box-shadow: inset 1px 1px 5px $dkgrey;
+    cursor: pointer;
+  }
+}
+
+#inline-content {
+  grid-area: inlineContent;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import './quoteMachine'
+import './quoteMachine.scss'
 import { faHashtag, faRandom } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -22,7 +22,7 @@ let qList = [
     }
 ]
 
-class Quotes extends React.Component<any,any>{
+export default class Quotes extends React.Component<any,any>{
     constructor(props:any){
         super(props);
         this.state = {
@@ -47,10 +47,11 @@ class Quotes extends React.Component<any,any>{
     render(){
         return(
             <div id="quote-box">
-                <header>
+                <header id="quote-header">
                     <span id="author">{this.state.author}</span>
                     <a id="tweet-quote" 
-                        href="https://twitter.com/intent/tweet" target="_blank">
+                        href="https://twitter.com/intent/tweet" 
+                        target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faHashtag} />
                     </a>
                     <button id="new-quote" 

@@ -73,6 +73,7 @@ h2{
   margin: 0px auto;
 }
 #welcome-grid {
+  background: none;
   height: 100%;
   margin: 0px;
   padding: 0px;
@@ -172,7 +173,11 @@ h2{
       display: flex;
       flex-wrap: wrap;
 
-      a {
+      .internal-example{
+        cursor:pointer;
+      }
+
+      a, .internal-example {
         text-align: center;
         box-sizing: border-box;
         padding: 5px;
@@ -185,17 +190,17 @@ h2{
         background-color: $dkgrey;
         border-radius: 0;
       }
-      a:active {
+      a:active, .internal-example:active {
         color: white;
       }
-      a:first-child {
+      a:first-child, .internal-example:first-child {
         border-radius: 0 0 0 5px;
       }
-      a:last-child {
+      a:last-child, .internal-example:last-child {
         border-radius: 0 0 5px 0;
         border-right: none;
       }
-      a:only-child {
+      a:only-child, .internal-example:only-child {
         border-radius: 0 0 5px 5px;
         border-right: none;
       }
