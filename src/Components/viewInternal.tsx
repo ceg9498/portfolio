@@ -4,6 +4,7 @@ import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Quotes from '../Examples/quoteMachine'
+import MDPreviewer from '../Examples/markdownPreviewer'
 
 export default function Example(props:any){
   console.log("Example is loaded")
@@ -34,7 +35,7 @@ function GetView(link:string){
       // view = < />;
       break;
     case "markdownPreviewer":
-      // view = < />;
+      view = <MDPreviewer />;
       break;
     case "jsCalculator":
       // view = < />;
