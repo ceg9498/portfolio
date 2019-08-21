@@ -9,8 +9,8 @@
     "@types/node": "12.6.8",
     "@types/react": "16.8.23",
     "@types/react-dom": "16.8.4",
-    "marked": "^0.7.0",
     "dompurify": "^1.0.11",
+    "marked": "^0.7.0",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -43,6 +43,6 @@
   "homepage": "https://ceg9498.github.io/portfolio/",
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.0-7",
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.1.1"
   }
 }
