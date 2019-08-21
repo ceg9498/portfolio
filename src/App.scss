@@ -211,12 +211,7 @@ article {
   box-shadow: none;
 }
 .project-tile:hover .project-tile-info {
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  margin: 0;
   height: 300px;
-  width: 300px;
   border-radius: 25px 25px 5px 5px;
   background-color: change-color($color: $dkgrey, $alpha: 0.9);
   box-shadow: 1px 1px 3px $mdgrey;
