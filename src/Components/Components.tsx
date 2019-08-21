@@ -193,7 +193,7 @@ export class ProjectSection extends React.Component<any,any>{
         {this.state.viewExample && 
           <Example proj={this.state.viewLink} close={this.closeInlineView} />
         }
-        <h2>Projects</h2>
+        <h2 className="hidden-header">Projects</h2>
         <div className="proj-flex">
           {this.projects.map(item => 
             <ProjectTile proj={item} key={item.title} openView={this.openInlineView} />
