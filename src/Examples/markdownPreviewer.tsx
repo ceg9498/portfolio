@@ -19,7 +19,7 @@ export default class MDPreviewer extends React.Component<any,any>{
    sample += "`body { display: grid; }`\n\n";
    sample += "* List an item\n* Or two\n\n> Quote someone!\n\n";
    sample += "```css\ntextarea {\n width: 500px;\n height: 200px;\n}\n```\n\n";
-   sample += "![An Image of a dog](https://i.imgur.com/EMEtj76.jpg)";
+   sample += "![An Image of my Quote Machine project](https://i.imgur.com/BzdnVqY.png)";
    let res = marked(sample);
    this.setState({
     markdown: sample,
