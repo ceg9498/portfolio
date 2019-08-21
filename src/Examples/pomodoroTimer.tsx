@@ -1,6 +1,6 @@
 import React from 'react'
 import './pomodoroTimer.scss'
-import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faAngleUp, faAngleDown, faPlay, faPause, faFastBackward } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default class Pomodoro extends React.Component<any,any> {
@@ -147,7 +147,7 @@ export default class Pomodoro extends React.Component<any,any> {
    }
    
    // play timer alarm here
-   if(nMin === 0 && nSec == 0){
+   if(nMin === 0 && nSec === 0){
     this.setState({
      remTime: {
       min: nMin,
@@ -187,29 +187,29 @@ export default class Pomodoro extends React.Component<any,any> {
   
   render(){
    return(
-    <>
-     <h1>Pomodoro Timer</h1>
-     <div id="settings">
-      <SetTimer 
-       timerType="session" 
-       timerLength={this.state.sessionTime} 
-       incr = {this.incrSession} 
-       decr = {this.decrSession} />
-      <SetTimer 
-       timerType="break" 
-       timerLength={this.state.breakTime} 
-       incr = {this.incrBreak} 
-       decr = {this.decrBreak} />
-     </div>
-     <TimerDisplay 
-      timerType={this.state.curTimer} 
-      remTime={this.state.remTime}
-      toggle={this.toggle}
-      reset={this.reset} />
-     <audio id="beep" preload="auto" 
-      src="https://goo.gl/65cBl1" 
-      ref={(audio)=>{this.beep = audio;}} />
-    </>
+    <main id="pomodoro-body">
+      <h1>Pomodoro Timer</h1>
+      <TimerDisplay 
+        timerType={this.state.curTimer} 
+        remTime={this.state.remTime}
+        toggle={this.toggle}
+        reset={this.reset} />
+      <audio id="beep" preload="auto" 
+        src="https://goo.gl/65cBl1" 
+        ref={(audio)=>{this.beep = audio;}} />
+      <div id="settings">
+        <SetTimer 
+        timerType="session" 
+        timerLength={this.state.sessionTime} 
+        incr = {this.incrSession} 
+        decr = {this.decrSession} />
+        <SetTimer 
+        timerType="break" 
+        timerLength={this.state.breakTime} 
+        incr = {this.incrBreak} 
+        decr = {this.decrBreak} />
+      </div>
+    </main>
    );
   }
  }
@@ -237,14 +237,14 @@ export default class Pomodoro extends React.Component<any,any> {
  
  function TimerDisplay(props){
   return(
-   <>
+   <div id="timer-display">
      <Countdown 
       timerType={props.timerType} 
       remTime={props.remTime} />
      <TimerControls 
       toggle={props.toggle} 
       reset={props.reset} />
-   </>
+   </div>
   );
  }
  
@@ -263,11 +263,11 @@ export default class Pomodoro extends React.Component<any,any> {
   return(
    <span>
     <button id="start_stop" onClick={props.toggle}>
-     <i className="fas fa-play"></i>
-     <i className="fas fa-pause"></i>
+     <FontAwesomeIcon icon={faPlay} />
+     <FontAwesomeIcon icon={faPause} />
     </button>
     <button id="reset" onClick={props.reset}>
-     <i className="fas fa-fast-backward"></i>
+     <FontAwesomeIcon icon={faFastBackward} />
     </button>
    </span>
   );
