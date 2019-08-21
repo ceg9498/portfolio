@@ -119,7 +119,7 @@ export class ProjectSection extends React.Component<any,any>{
       {
         title:"Tech Doc Page",
         exLink:"https://codepen.io/ceg9498/full/pXbrqp",
-        inLink: "techDocPage",
+        inLink: "", // techDocPage
         codeLink: "https://codepen.io/ceg9498/pen/pXbrqp",
         imgUrl:"https://i.imgur.com/ZJ92yGh.png",
         description:"A technical documentation style page.",
@@ -128,6 +128,7 @@ export class ProjectSection extends React.Component<any,any>{
       {
         title:"Translation Practice App",
         exLink:"https://thaliak.herokuapp.com/",
+        inLink: "",
         gitLink: "https://github.com/ceg9498/thaliak-xltn",
         imgUrl:"https://i.imgur.com/NUPeg62.png",
         description:"An app that facilitates practicing translation of natural languages.",
@@ -163,7 +164,7 @@ export class ProjectSection extends React.Component<any,any>{
       {
         title:"JavaScript Calculator",
         exLink:"https://codepen.io/ceg9498/full/PoYNagj",
-        inLink:"jsCalculator",
+        inLink:"", //jsCalculator
         codeLink: "https://codepen.io/ceg9498/pen/PoYNagj",
         imgUrl:"",
         description:"A basic calculator built with React.js; utilizes immediate execution.",
