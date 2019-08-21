@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
 $ltblue: #9198e5;
 
 #inline-content {
@@ -5,30 +7,31 @@ $ltblue: #9198e5;
   height: 100%;
   display: grid;
   place-items: center;
-  font-family: 'Indie Flower', cursive;
   color: black;
   background-color: #555;
 }
 
 #quote-box{
- background-color: white;
- background: repeating-linear-gradient(#fff, #fff 25px, $ltblue 26px, $ltblue 27px);
- background-position-y: 34px;
- height: 300px;
- width: 500px;
- padding: 0;
- margin-top: 50px;
+  font-family: 'Indie Flower', cursive;
+  background-color: white;
+  background: repeating-linear-gradient(#fff, #fff 25px, $ltblue 26px, $ltblue 27px);
+  background-position-y: 34px;
+  height: 300px;
+  width: 500px;
+  padding: 0;
+  margin-top: 50px;
 }
 #quote-header {
- position: relative;
- background: linear-gradient(#fff, #fff 33px, pink 35px, pink 36px);
- height: 36px;
- #author {
-  position: absolute;
-  left: 10px;
-  top: 5px;
-  font-size: 30px;
-  font-weight: 700;
+  position: relative;
+  background: linear-gradient(#fff, #fff 33px, pink 35px, pink 36px);
+  height: 36px;
+  
+  #author {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    font-size: 30px;
+    font-weight: 700;
  }
  #author::after {
   content: " said:";
