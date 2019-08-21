@@ -6,6 +6,7 @@ export default class MDPreviewer extends React.Component<any,any>{
   constructor(props:any){
    super(props);
    this.state = {};
+   this.handleChange = this.handleChange.bind(this);
   }
   componentWillMount(){
    marked.setOptions({
@@ -27,10 +28,11 @@ export default class MDPreviewer extends React.Component<any,any>{
   }
   
   handleChange(e){
-   let res = marked(e.target.value);
-   this.setState({
-    result: res
-   })
+    let res = marked(e.target.value);
+    this.setState({
+      markdown: e.target.value,
+      result: res
+    })
   }
   markup(){
    return {__html: this.state.result};
