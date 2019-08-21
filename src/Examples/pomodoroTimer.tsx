@@ -1,5 +1,7 @@
 import React from 'react'
 import './pomodoroTimer.scss'
+import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default class Pomodoro extends React.Component<any,any> {
   interval;
@@ -227,8 +229,8 @@ export default class Pomodoro extends React.Component<any,any> {
   return(
    <div>
     {props.children}
-    <button onClick={props.incr} class="incr"><i id={props.timerType+"-increment"} className="fas fa-angle-up"></i></button>
-    <button onClick={props.decr} class="decr"><i id={props.timerType+"-decrement"} className="fas fa-angle-down"></i></button>
+    <button onClick={props.incr} className="incr"><span id={props.timerType+"-increment"}><FontAwesomeIcon icon={faAngleUp} /></span></button>
+    <button onClick={props.decr} className="decr"><span id={props.timerType+"-decrement"}><FontAwesomeIcon icon={faAngleDown} /></span></button>
    </div>
   );
  }
