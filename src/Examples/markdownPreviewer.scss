@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+
 $ltgreen: hsla(154, 41%, 73%, .75);
 $ltblue: hsla(214, 41%, 73%, .75);
 
@@ -18,7 +20,7 @@ $ltblue: hsla(214, 41%, 73%, .75);
  font-family: Courier, monospace;
 }
 #previewer {
- font-family: "Satisfy", cursive;
+ font-family: "Satisfy", "Lucida Handwriting", cursive;
  right: 5px;
 }
 
