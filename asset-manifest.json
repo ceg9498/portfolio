@@ -1,15 +1,21 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.237a099f.chunk.css",
-    "main.js": "/portfolio/static/js/main.90a66b93.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.90a66b93.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.a7c158e6.chunk.css",
+    "main.js": "/portfolio/static/js/main.291d4b58.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.291d4b58.chunk.js.map",
     "runtime~main.js": "/portfolio/static/js/runtime~main.f308c8e6.js",
     "runtime~main.js.map": "/portfolio/static/js/runtime~main.f308c8e6.js.map",
-    "static/js/2.3310f33a.chunk.js": "/portfolio/static/js/2.3310f33a.chunk.js",
-    "static/js/2.3310f33a.chunk.js.map": "/portfolio/static/js/2.3310f33a.chunk.js.map",
+    "static/js/2.4c7363d6.chunk.js": "/portfolio/static/js/2.4c7363d6.chunk.js",
+    "static/js/2.4c7363d6.chunk.js.map": "/portfolio/static/js/2.4c7363d6.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.cce893e93b2d3d8ea851e43a46b5dbee.js": "/portfolio/precache-manifest.cce893e93b2d3d8ea851e43a46b5dbee.js",
+    "precache-manifest.a799f7b333067cd623050fb87d8bafc7.js": "/portfolio/precache-manifest.a799f7b333067cd623050fb87d8bafc7.js",
     "service-worker.js": "/portfolio/service-worker.js",
-    "static/css/main.237a099f.chunk.css.map": "/portfolio/static/css/main.237a099f.chunk.css.map"
+    "static/css/main.a7c158e6.chunk.css.map": "/portfolio/static/css/main.a7c158e6.chunk.css.map",
+    "static/media/jsCalculator.png": "/portfolio/static/media/jsCalculator.fdbe6ed2.png",
+    "static/media/markdownPreviewer.png": "/portfolio/static/media/markdownPreviewer.74661f1f.png",
+    "static/media/pomodoroTimer.png": "/portfolio/static/media/pomodoroTimer.d857f111.png",
+    "static/media/quoteMachine.png": "/portfolio/static/media/quoteMachine.6879cb7f.png",
+    "static/media/techDocPage.png": "/portfolio/static/media/techDocPage.00857240.png",
+    "static/media/translationPractice.png": "/portfolio/static/media/translationPractice.ee180aee.png"
   }
 }
