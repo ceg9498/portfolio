@@ -4,6 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Popup from './popup'
 import Example from './viewInternal'
 
+import pomoImage from '../Images/pomodoroTimer.png'
+import quoteImage from '../Images/quoteMachine.png'
+import mdPrevImage from '../Images/markdownPreviewer.png'
+import jsCalcImage from '../Images/jsCalculator.png'
+import techDocPageImage from '../Images/techDocPage.png'
+import translationImage from '../Images/translationPractice.png'
+
 export function Navbar(){
   return(
     <nav id="navbar">
@@ -121,7 +128,7 @@ export class ProjectSection extends React.Component<any,any>{
         exLink:"https://codepen.io/ceg9498/full/pXbrqp",
         inLink: "", // techDocPage
         codeLink: "https://codepen.io/ceg9498/pen/pXbrqp",
-        imgUrl:"https://i.imgur.com/ZJ92yGh.png",
+        imgUrl:techDocPageImage,
         description:"A technical documentation style page.",
         tech:"HTML & CSS"
       },
@@ -130,7 +137,7 @@ export class ProjectSection extends React.Component<any,any>{
         exLink:"https://thaliak.herokuapp.com/",
         inLink: "",
         gitLink: "https://github.com/ceg9498/thaliak-xltn",
-        imgUrl:"https://i.imgur.com/NUPeg62.png",
+        imgUrl:translationImage,
         description:"An app that facilitates practicing translation of natural languages.",
         tech:"React, TypeScript, & CSS"
       },
@@ -139,7 +146,7 @@ export class ProjectSection extends React.Component<any,any>{
         exLink:"https://codepen.io/ceg9498/full/aboOYQG",
         inLink:"pomodoroTimer",
         codeLink:"https://codepen.io/ceg9498/pen/aboOYQG",
-        imgUrl:"",
+        imgUrl:pomoImage,
         description:"A simple timer app for measuring focused work time and break time.",
         tech:"React & Sass"
       },
@@ -148,7 +155,7 @@ export class ProjectSection extends React.Component<any,any>{
         exLink:"https://codepen.io/ceg9498/full/JjPYNjP",
         inLink:"quoteMachine",
         codeLink: "https://codepen.io/ceg9498/pen/JjPYNjP",
-        imgUrl:"",
+        imgUrl:quoteImage,
         description:"Generates a random quote from a predetermined list. Quote is displayed with a handwritten notecard aesthetic.",
         tech:"React & Sass"
       },
@@ -157,7 +164,7 @@ export class ProjectSection extends React.Component<any,any>{
         exLink:"https://codepen.io/ceg9498/full/vYBGVKB",
         inLink:"markdownPreviewer",
         codeLink: "https://codepen.io/ceg9498/pen/vYBGVKB",
-        imgUrl:"",
+        imgUrl:mdPrevImage,
         description:"Displays a preview of GitHub-flavor markdown as provided.",
         tech:"React, Sass, & Marked.js library"
       },
@@ -166,7 +173,7 @@ export class ProjectSection extends React.Component<any,any>{
         exLink:"https://codepen.io/ceg9498/full/PoYNagj",
         inLink:"", //jsCalculator
         codeLink: "https://codepen.io/ceg9498/pen/PoYNagj",
-        imgUrl:"",
+        imgUrl:jsCalcImage,
         description:"A basic calculator built with React.js; utilizes immediate execution.",
         tech:"React & Sass"
       },
