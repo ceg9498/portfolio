@@ -1,6 +1,7 @@
 import React from 'react'
 import marked from 'marked'
 import './markdownPreviewer.scss'
+const DOMPurify = require('dompurify')
 
 export default class MDPreviewer extends React.Component<any,any>{
   constructor(props:any){
@@ -20,7 +21,7 @@ export default class MDPreviewer extends React.Component<any,any>{
    sample += "* List an item\n* Or two\n\n> Quote someone!\n\n";
    sample += "```css\ntextarea {\n width: 500px;\n height: 200px;\n}\n```\n\n";
    sample += "![An Image of my Quote Machine project](https://i.imgur.com/BzdnVqY.png)";
-   let res = marked(sample);
+   let res = DOMPurify.sanitize(marked(sample));
    this.setState({
     markdown: sample,
     result: res
@@ -28,14 +29,15 @@ export default class MDPreviewer extends React.Component<any,any>{
   }
   
   handleChange(e){
-    let res = marked(e.target.value);
+    let md = e.target.value;
+    let sani = DOMPurify.sanitize(marked(md));
     this.setState({
-      markdown: e.target.value,
-      result: res
+      markdown: md,
+      result: sani
     })
   }
   markup(){
-   return {__html: this.state.result};
+    return {__html: this.state.result};
   }
   
   render(){
