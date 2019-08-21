@@ -14,7 +14,7 @@ export default class MDPreviewer extends React.Component<any,any>{
     breaks: true,
     xhtml: true,
    });
-   let sample = "# Top-level header\n## Sub-header\nSome **bold** text\n\n";
+   let sample = "# Top-level header\n\n## Sub-header\n\nSome **bold** text\n\n";
    sample += "Visit my [portfolio](https://ceg9498.github.io/portfolio/)\n\n";
    sample += "`body { display: grid; }`\n\n";
    sample += "* List an item\n* Or two\n\n> Quote someone!\n\n";
