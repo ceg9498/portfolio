@@ -1,0 +1,76 @@
+
+#welcome-section {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 75%;
+  margin: 0px auto;
+}
+#welcome-grid {
+  background: none;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  display: grid;
+  grid-template:
+    "greet greet name ."
+    ". tagline tagline tagline";
+  grid-gap: 5px;
+
+  span {
+    display: inline-block;
+    text-align: center;
+  }
+}
+#w-name {
+  font-size: 45px;
+  margin: 0px;
+  padding: 10px 0px;
+  text-align: center;
+  grid-area: name;
+  align-self: end;
+
+  background: $ltgrey;
+  color: $dkgrey;
+}
+#w-greeting {
+  font-size: 20vh;
+  grid-area: greet;
+  align-self: end;
+
+  background: $ltgreen;
+  color: $dkgrey;
+}
+#w-tagline {
+  padding: 10px 0px;
+  font-weight: bold;
+  font-size: 20px;
+  grid-area: tagline;
+  align-self: start;
+
+  background: $dkgreen;
+  color: $dkgrey;
+}
+
+// re-arrange welcome section
+@media only screen and (max-width: 650px){
+  #welcome-grid {
+    grid-template:
+      "."
+      "greet"
+      "."
+      "name"
+      "tagline";
+    grid-template-rows: .25fr auto .25fr auto auto;
+    align-content: center;
+  }
+}
+
+// Re-size welcome section text 
+@media only screen and (max-width: 380px){
+  #w-name {
+    font-size: 30px;
+  }
+  #w-tagline {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,114 @@
+
+#projects {
+  min-height: 100vh;
+  background-color: $dkgreen;
+  background-image: repeating-linear-gradient(
+    change-color($color: $ltgreen, $alpha: 0.1),
+    change-color($color: $ltgreen, $alpha: 0.1),
+    transparent 1px, transparent 4px);
+  padding: 50px 10px 10px 10px;
+}
+.proj-flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    border-radius: 50%;
+  }
+}
+.project-tile {
+  position: relative;
+  background-position: center;
+  background-size: auto 300px;
+  background-repeat: no-repeat;
+  background-color: change-color($color: $ltgrey, $alpha: 0.6);
+  width: 300px;
+  height: 300px;
+  margin: 8px;
+  border: 10px solid $dkgrey;
+  border-radius: 50% 50% 5px 5px;
+  box-shadow: 1px 1px 3px $mdgrey;
+  vertical-align: center;
+
+  .project-tile-info {
+    display: inline-block;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    background-color: $dkgrey;
+    color: $ltgreen;
+    border-radius: 5px;
+
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .project-tile-title {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .project-tile-links {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .internal-example-link{
+        cursor:pointer;
+      }
+
+      a, .internal-example-link {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 10px;
+        max-width: 300px;
+        height: 40px;
+        flex-grow: 1;
+        border-top: 2px solid $ltgrey;
+        border-right: 2px solid $ltgrey;
+        color: white;
+        background-color: $dkgrey;
+        border-radius: 0;
+      }
+      a:active, .internal-example-link:active {
+        color: white;
+      }
+      a:first-child, .internal-example-link:first-child {
+        border-radius: 0 0 0 5px;
+      }
+      a:last-child, .internal-example-link:last-child {
+        border-radius: 0 0 5px 0;
+        border-right: none;
+      }
+      a:only-child, .internal-example-link:only-child {
+        border-radius: 0 0 5px 5px;
+        border-right: none;
+      }
+    }
+  }
+}
+.project-tile:hover {
+  box-shadow: none;
+}
+.project-tile:hover .project-tile-info {
+  height: 300px;
+  border-radius: 25px 25px 5px 5px;
+  background-color: change-color($color: $dkgrey, $alpha: 0.9);
+  box-shadow: 1px 1px 3px $mdgrey;
+
+  .project-tile-title {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $ltgreen;
+  }
+}

@@ -1,0 +1,76 @@
+
+#main-nav {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding: 0 20px 7px 20px;
+  width: 100vw;
+
+  background-color: change-color($color: $dkgrey, $alpha: 0.8);
+
+  ul {
+    list-style: none;
+    display: flex;
+
+    padding: 0px;
+    margin: 0px;
+  }
+  li {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    background: $dkgrey;
+    color: $ltgreen;
+    padding: 10px 20px;
+    margin-right: 7px;
+    border-right: 2px solid $ltgreen;
+    border-left: 2px solid $ltgreen;
+    border-bottom: 2px solid $ltgreen;
+  }
+  a:hover, a:focus {
+    background-color: $dkgreen;
+    color: white;
+    box-shadow: inset 1px 1px 5px $dkgrey;
+  }
+  #a-welcome {
+    color:white;
+    font-weight:bold;
+  }
+}
+/*
+// Adjust Navbar 
+@media only screen and (max-width: 500px){
+  #main-nav {
+    border-bottom: 1px solid $dkgreen;
+    width: 100vh;
+    height: 25px;
+    right: 100vw;
+    transform: rotate(-90deg);
+    transform-origin: 100% 0;
+
+    ul {
+      width: 100%;
+      flex-flow: row-reverse nowrap;
+      justify-items: flex-end;
+    }
+    a {
+      position: relative;
+      top: -5px;
+    }
+    a:hover, a:focus {
+      padding-top: 20px;
+    }
+  }
+
+  #projects {
+    padding-left: 30px;
+  }
+  #connect {
+    padding-left: 30px;
+  }
+}
+*/
