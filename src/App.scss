@@ -14,16 +14,16 @@ body {
 * {
   box-sizing: border-box;
 }
-article {
+#portfolio-article {
   background-color: $dkgrey;
   background-image: repeating-linear-gradient(hsla(204, 2%, 43%, .1),	hsla(204, 2%, 43%,.1) 1px, transparent 1px, transparent 4px);
 }
-.hidden-header {
+.hidden {
   position: absolute;
   z-index: -20;
 }
 
-#navbar {
+#main-nav {
   position: fixed;
   top: 0;
   z-index: 1;
@@ -88,7 +88,7 @@ article {
     text-align: center;
   }
 }
-#name {
+#w-name {
   font-size: 45px;
   margin: 0px;
   padding: 10px 0px;
@@ -99,7 +99,7 @@ article {
   background: $ltgrey;
   color: $dkgrey;
 }
-#greeting {
+#w-greeting {
   font-size: 20vh;
   grid-area: greet;
   align-self: end;
@@ -107,7 +107,7 @@ article {
   background: $ltgreen;
   color: $dkgrey;
 }
-#tagline {
+#w-tagline {
   padding: 10px 0px;
   font-weight: bold;
   font-size: 20px;
@@ -173,11 +173,11 @@ article {
       display: flex;
       flex-wrap: wrap;
 
-      .internal-example{
+      .internal-example-link{
         cursor:pointer;
       }
 
-      a, .internal-example {
+      a, .internal-example-link {
         text-align: center;
         box-sizing: border-box;
         padding: 5px;
@@ -190,17 +190,17 @@ article {
         background-color: $dkgrey;
         border-radius: 0;
       }
-      a:active, .internal-example:active {
+      a:active, .internal-example-link:active {
         color: white;
       }
-      a:first-child, .internal-example:first-child {
+      a:first-child, .internal-example-link:first-child {
         border-radius: 0 0 0 5px;
       }
-      a:last-child, .internal-example:last-child {
+      a:last-child, .internal-example-link:last-child {
         border-radius: 0 0 5px 0;
         border-right: none;
       }
-      a:only-child, .internal-example:only-child {
+      a:only-child, .internal-example-link:only-child {
         border-radius: 0 0 5px 5px;
         border-right: none;
       }
@@ -223,7 +223,8 @@ article {
   }
 }
 
-footer {
+// footer of main page
+#connect {
   padding: 15px 10px;
   height: auto;
 

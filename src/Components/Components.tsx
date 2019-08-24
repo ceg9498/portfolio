@@ -13,14 +13,14 @@ import translationImage from '../Images/translationPractice.png'
 
 export function Navbar(){
   return(
-    <nav id="navbar">
+    <nav id="main-nav">
       <ul role="navigation">
         <li>
           <a href="#welcome-section" id="a-welcome">Emily&nbsp;Gagne</a>
         </li><li>
           <a href="#projects" id="a-proj">Projects</a>
         </li><li>
-          <a href="#profile-link">Connect</a>
+          <a href="#connect">Connect</a>
         </li>
       </ul>
     </nav>
@@ -31,9 +31,9 @@ export function Welcome(){
   return(
     <header id="welcome-section">
       <h1 id="welcome-grid">
-        <span id="greeting">Hi!</span>
-        <span id="name">I'm Emily.</span>
-        <span id="tagline">It's nice to meet you.</span>
+        <span id="w-greeting">Hi!</span>
+        <span id="w-name">I'm Emily.</span>
+        <span id="w-tagline">It's nice to meet you.</span>
       </h1>
     </header>
   );
@@ -82,7 +82,7 @@ class ProjectTile extends React.Component<any,any>{
               <p>{tech}</p>
               <div className="project-tile-links">
                 { inLink &&
-                  <span className="internal-example" onClick={()=>this.props.openView(this.props.proj)}>
+                  <span className="internal-example-link" onClick={()=>this.props.openView(this.props.proj)}>
                     <Popup title={<FontAwesomeIcon icon={faEye} />} 
                     content="View this project within this page." />
                   </span>
@@ -201,7 +201,7 @@ export class ProjectSection extends React.Component<any,any>{
         {this.state.viewExample && 
           <Example proj={this.state.viewLink} close={this.closeInlineView} />
         }
-        <h2 className="hidden-header">Projects</h2>
+        <h2 className="hidden">Projects</h2>
         <div className="proj-flex">
           {this.projects.map(item => 
             <ProjectTile proj={item} key={item.title} openView={this.openInlineView} />
@@ -214,9 +214,15 @@ export class ProjectSection extends React.Component<any,any>{
 
 export function Footer(){
   return(
-    <footer>
-      <a href="https://github.com/ceg9498" id="profile-link" target="_blank" rel="noopener noreferrer">View my work on Github</a>
-      <a href="https://twitter.com/ceg9498">Twitter: @ceg9498</a>
+    <footer id="connect">
+      <a href="https://github.com/ceg9498" id="github-profile-link" className="profile-link"
+        target="_blank" rel="noopener noreferrer">
+          View my work on Github
+      </a>
+      <a href="https://twitter.com/ceg9498" id="twitter-profile-link" className="profile-link"
+        target="_blank" rel="noopener noreferrer">
+          Twitter: @ceg9498
+      </a>
     </footer>
   );
 }

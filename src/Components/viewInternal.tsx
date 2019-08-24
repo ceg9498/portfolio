@@ -73,14 +73,13 @@ export default class Example extends React.Component<any,any>{
   render(){
     return(
       <div id="inline-viewport">
-        <div id="inline-header">
+        <header id="inline-header">
           <h3>{this.props.proj.title}</h3>
-          <span id="gap"></span>
           <span id="inline-close" onClick={this.props.close}>
             <FontAwesomeIcon icon={faTimesCircle} />
           </span>
-        </div>
-        <div id="inline-content">{this.state.view}</div>
+        </header>
+        <article id="inline-content">{this.state.view}</article>
       </div>
     );
   }
