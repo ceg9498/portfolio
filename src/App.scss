@@ -160,6 +160,11 @@ body {
     color: $ltgreen;
     border-radius: 5px;
 
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+
     .project-tile-title {
       text-align: center;
       font-weight: bold;

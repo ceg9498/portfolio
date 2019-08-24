@@ -75,7 +75,7 @@ class ProjectTile extends React.Component<any,any>{
         style={{backgroundImage: 'url(' + imgUrl + ')'}}
         onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
         <div className="project-tile-info">
-          <span className="project-tile-title">{title}</span>
+          <h3 className="project-tile-title">{title}</h3>
           { this.state.isOpen &&
             <>
               <p>{description}</p>
