@@ -187,7 +187,7 @@ export default class Pomodoro extends React.Component<any,any> {
   
   render(){
    return(
-    <main id="pomodoro-body">
+    <div id="pomodoro-body">
       <h1>Pomodoro Timer</h1>
       <TimerDisplay 
         timerType={this.state.curTimer} 
@@ -209,7 +209,7 @@ export default class Pomodoro extends React.Component<any,any> {
         incr = {this.incrBreak} 
         decr = {this.decrBreak} />
       </div>
-    </main>
+    </div>
    );
   }
  }
