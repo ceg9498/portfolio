@@ -1,13 +1,8 @@
-$dkgreen: #61892F;
-$ltgreen: #86C232;
-$dkgrey: #222629;
-
 #inline-viewport {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: change-color($color: black, $alpha: .75);
-  color: white;
+  background-color: change-color($color: $dkgrey, $alpha: 0.8);
   height: 100vh;
   width: 100vw;
   padding: 0 5vw 5vh 5vw;
@@ -20,7 +15,7 @@ $dkgrey: #222629;
   padding: 0;
   height: 50px;
   width: 100%;
-  background-color: hsla(206, 9%, 15%, .8);
+  background-color: change-color($color: $dkgrey, $alpha: 0.8);
   color: $ltgreen;
   grid-area: inlineHeader;
   display: flex;
@@ -58,7 +53,7 @@ $dkgrey: #222629;
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: $dkgrey;
   overflow-y: auto;
   overflow-x: hidden;
 }
