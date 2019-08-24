@@ -46,20 +46,22 @@ export default class Quotes extends React.Component<any,any>{
 
     render(){
         return(
-            <div id="quote-box">
-                <header id="quote-header">
-                    <span id="author">{this.state.author}</span>
-                    <a id="tweet-quote" 
-                        href="https://twitter.com/intent/tweet" 
-                        target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faHashtag} />
-                    </a>
-                    <button id="new-quote" 
-                        onClick={this.getQuote}>
-                        <FontAwesomeIcon icon={faRandom} />
-                    </button>
-                </header>
-                <p id="text">{this.state.text}</p>
+            <div id="quote-body">
+                <div id="quote-box">
+                    <header id="quote-header">
+                        <span id="author">{this.state.author}</span>
+                        <a id="tweet-quote" 
+                            href="https://twitter.com/intent/tweet" 
+                            target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faHashtag} />
+                        </a>
+                        <button id="new-quote" 
+                            onClick={this.getQuote}>
+                            <FontAwesomeIcon icon={faRandom} />
+                        </button>
+                    </header>
+                    <p id="text">{this.state.text}</p>
+                </div>
             </div>
         );
     }
