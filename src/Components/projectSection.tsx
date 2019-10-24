@@ -52,7 +52,7 @@ export class ProjectTile extends React.Component<any,any>{
             </a>
           }
           { codeLink &&
-            <a href={exLink} 
+            <a href={codeLink} 
               target="_blank" rel='noreferrer noopener'>
                 {/*<Popup title={<FontAwesomeIcon icon={faCode} />}
                 content="View the code for this project." />*/}
@@ -60,7 +60,7 @@ export class ProjectTile extends React.Component<any,any>{
             </a>
           }
           { gitLink &&
-            <a href={exLink} 
+            <a href={gitLink} 
               target="_blank" rel='noreferrer noopener'>
                 {/*<Popup title={<FontAwesomeIcon icon={faCodeBranch} />}
                 content="View the source for this project on GitHub." />*/}
@@ -70,9 +70,12 @@ export class ProjectTile extends React.Component<any,any>{
         </div>
         }
         {isLeft &&
-          <div className="project-tile-image" style={{backgroundImage: `url(${imgUrl})`}}>
-            {/** Empty; let the bg image speak */}
-          </div>
+          <>
+            <div className="project-tile-image" style={{backgroundImage: `url(${imgUrl})`}}>
+              {/** Empty; let the bg image speak */}
+            </div>
+            <span className="project-tile-gap"></span>
+          </>
         }
         <div className="project-tile-info">
           <h3 className="project-tile-title">{title}</h3>
@@ -81,11 +84,13 @@ export class ProjectTile extends React.Component<any,any>{
             <p>{description}</p>
           </div>
         </div>
-        
         {!isLeft &&
-          <div className="project-tile-image" style={{backgroundImage: `url(${imgUrl})`}}>
-            {/** Empty; let the bg image speak */}
-          </div>
+          <>
+            <span className="project-tile-gap"></span>
+            <div className="project-tile-image" style={{backgroundImage: `url(${imgUrl})`}}>
+              {/** Empty; let the bg image speak */}
+            </div>
+          </>
         }
         {!isLeft &&
           <div className="project-tile-links">
@@ -105,7 +110,7 @@ export class ProjectTile extends React.Component<any,any>{
             </a>
           }
           { codeLink &&
-            <a href={exLink} 
+            <a href={codeLink} 
               target="_blank" rel='noreferrer noopener'>
                 {/*<Popup title={<FontAwesomeIcon icon={faCode} />}
                 content="View the code for this project." />*/}
@@ -113,7 +118,7 @@ export class ProjectTile extends React.Component<any,any>{
             </a>
           }
           { gitLink &&
-            <a href={exLink} 
+            <a href={gitLink} 
               target="_blank" rel='noreferrer noopener'>
                 {/*<Popup title={<FontAwesomeIcon icon={faCodeBranch} />}
                 content="View the source for this project on GitHub." />*/}
@@ -169,7 +174,7 @@ export class ProjectSection extends React.Component<any,any>{
         inLink:"quoteMachine",
         codeLink: "https://codepen.io/ceg9498/pen/JjPYNjP",
         imgUrl:quoteImage,
-        description:"Generates a random quote from a predetermined list. Quote is displayed with a handwritten notecard aesthetic. LOREM IPSUM: Generates a random quote from a predetermined list. Quote is displayed with a handwritten notecard aesthetic. Generates a random quote from a predetermined list. Quote is displayed with a handwritten notecard aesthetic.",
+        description:"Generates a random quote from a predetermined list. Quote is displayed with a handwritten notecard aesthetic.",
         tech:"React & Sass",
         isLeft: false
       },
