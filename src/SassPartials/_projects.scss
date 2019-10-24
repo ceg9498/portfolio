@@ -105,9 +105,3 @@
   }
 
 }
-.project-tile:hover {
-  box-shadow: none;
-}
-.project-tile:hover .project-tile-info {
-  background-color: change-color($color: $dkgrey, $alpha: 0.9);
-}
