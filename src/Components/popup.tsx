@@ -31,6 +31,13 @@ export default class Popup extends React.Component<any,any> {
 			width: "300px"
 		};
 	};
+	setTop = () => {
+		return {
+			position: "absolute" as "absolute",
+			top: "-50px",
+			width: "300px"
+		}
+	}
 		
 	render(){
 		let isOpen = this.state.isOpen;
@@ -45,8 +52,11 @@ export default class Popup extends React.Component<any,any> {
 			case 'right':
 				style = this.setRight();
 				break;
+			case 'top':
+				style = this.setTop();
+				break;
 			default:
-				style = this.setRight();
+				style = this.setTop();
 		}
 		
 		return (

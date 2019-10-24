@@ -21,115 +21,105 @@ interface pTileProps {
   inLink?:string;
   codeLink?:string;
   gitLink?:string;
-  isLeft:boolean;
+  direction:string;
 };
 
 export class ProjectTile extends React.Component<any,any>{
   constructor(props:pTileProps){
     super(props);
-    this.state = { isOpen: false, viewExample: false };
+    this.state = { viewExample: false };
   }
   render(){
-    let { title, imgUrl, description, tech, exLink, inLink, codeLink, gitLink, isLeft} = this.props.proj;
+    let { title, imgUrl, description, tech, direction} = this.props.proj;
     
     return(
       <div className="project-tile">
-        {isLeft &&
-          <div className="project-tile-links">
-          { inLink &&
-            <span className="internal-example-link" onClick={()=>this.props.openView(this.props.proj)}>
-              <Popup title={<FontAwesomeIcon icon={faEye} />} 
-              content="View this project within this page."
-              direction="right" />
-            </span>
-          }
-          { exLink &&
-            <a href={exLink} 
-              target="_blank" rel='noreferrer noopener'>
-                <Popup title={<FontAwesomeIcon icon={faExternalLinkSquareAlt} />}
-                content="View this project on an external page."
-                direction="right" />
-            </a>
-          }
-          { codeLink &&
-            <a href={codeLink} 
-              target="_blank" rel='noreferrer noopener'>
-                <Popup title={<FontAwesomeIcon icon={faCode} />}
-                content="View the code for this project."
-                direction="right" />
-            </a>
-          }
-          { gitLink &&
-            <a href={gitLink} 
-              target="_blank" rel='noreferrer noopener'>
-                <Popup title={<FontAwesomeIcon icon={faCodeBranch} />}
-                content="View the source for this project on GitHub."
-                direction="right" />
-            </a>
-          }
-        </div>
-        }
-        {isLeft &&
+        {direction === "left" &&
           <>
-            <div className="project-tile-image" style={{backgroundImage: `url(${imgUrl})`}}>
-              {/** Empty; let the bg image speak */}
-            </div>
+            <ProjectInfo title={title} tech={tech} description={description} />
             <span className="project-tile-gap"></span>
+            <ProjectImage imgUrl={imgUrl} />
+            <ProjectLinks proj={this.props.proj} openView={this.props.openView} />
           </>
         }
-        <div className="project-tile-info">
-          <h3 className="project-tile-title">{title}</h3>
-          <div className="project-description">
-            <p>{tech}</p>
-            <p>{description}</p>
-          </div>
-        </div>
-        {!isLeft &&
+        {direction === "right" &&
           <>
+            <ProjectLinks proj={this.props.proj} openView={this.props.openView} />
+            <ProjectImage imgUrl={imgUrl} />
             <span className="project-tile-gap"></span>
-            <div className="project-tile-image" style={{backgroundImage: `url(${imgUrl})`}}>
-              {/** Empty; let the bg image speak */}
-            </div>
+            <ProjectInfo title={title} tech={tech} description={description} />
           </>
         }
-        {!isLeft &&
-          <div className="project-tile-links">
-          { inLink &&
-            <span className="internal-example-link" onClick={()=>this.props.openView(this.props.proj)}>
-              <Popup title={<FontAwesomeIcon icon={faEye} />} 
-              content="View this project within this page."
-              direction="left" />
-            </span>
-          }
-          { exLink &&
-            <a href={exLink} 
-              target="_blank" rel='noreferrer noopener'>
-                <Popup title={<FontAwesomeIcon icon={faExternalLinkSquareAlt} />}
-                content="View this project on an external page."
-                direction="left" />
-            </a>
-          }
-          { codeLink &&
-            <a href={codeLink} 
-              target="_blank" rel='noreferrer noopener'>
-                <Popup title={<FontAwesomeIcon icon={faCode} />}
-                content="View the code for this project."
-                direction="left" />
-            </a>
-          }
-          { gitLink &&
-            <a href={gitLink} 
-              target="_blank" rel='noreferrer noopener'>
-                <Popup title={<FontAwesomeIcon icon={faCodeBranch} />}
-                content="View the source for this project on GitHub."
-                direction="left" />
-            </a>
-          }
-        </div>
+        {direction === "top" &&
+          <>
+            <ProjectImage imgUrl={imgUrl} />
+            <ProjectInfo title={title} tech={tech} description={description} />
+            <ProjectLinks proj={this.props.proj} openView={this.props.openView} />
+          </>
         }
       </div>
     );
   }
+}
+
+function ProjectLinks(props:{proj:pTileProps,openView:any}){
+  let { inLink, exLink, codeLink, gitLink, direction } = props.proj;
+  return(
+    <div className="project-tile-links">
+      { inLink &&
+        <span className="internal-example-link" onClick={()=>props.openView(props.proj)}>
+          <Popup title={<FontAwesomeIcon icon={faEye} />} 
+          content="View this project within this page."
+          direction={direction} />
+        </span>
+      }
+      { exLink &&
+        <a href={exLink} 
+          target="_blank" rel='noreferrer noopener'>
+            <Popup title={<FontAwesomeIcon icon={faExternalLinkSquareAlt} />}
+            content="View this project on an external page."
+            direction={direction} />
+        </a>
+      }
+      { codeLink &&
+        <a href={codeLink} 
+          target="_blank" rel='noreferrer noopener'>
+            <Popup title={<FontAwesomeIcon icon={faCode} />}
+            content="View the code for this project."
+            direction={direction} />
+        </a>
+      }
+      { gitLink &&
+        <a href={gitLink} 
+          target="_blank" rel='noreferrer noopener'>
+            <Popup title={<FontAwesomeIcon icon={faCodeBranch} />}
+            content="View the source for this project on GitHub."
+            direction={direction} />
+        </a>
+      }
+    </div>
+  );
+}
+
+function ProjectImage(props:{imgUrl:string}){
+  return(
+    <div className="project-tile-image" style={{backgroundImage: `url(${props.imgUrl})`}}>
+      {/** Empty; let the bg image speak */}
+    </div>
+  );
+}
+
+function ProjectInfo(props:{title:string,tech:string,description:string}){
+  let { title, tech, description } = props;
+  return (
+    <div className="project-tile-info">
+      <h3 className="project-tile-title">{title}</h3>
+      <div className="project-description">
+        <p>{tech}</p>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
 }
 
 export class ProjectSection extends React.Component<any,any>{
@@ -146,7 +136,7 @@ export class ProjectSection extends React.Component<any,any>{
         imgUrl:translationImage,
         description:"An app that facilitates practicing translation of natural languages.",
         tech:"React, TypeScript, & CSS",
-        isLeft: true
+        direction: "left"
       },
       {
         title: "Time-out To-dos",
@@ -156,7 +146,7 @@ export class ProjectSection extends React.Component<any,any>{
         imgUrl: "",
         description: "Keep track of your periodical to-do items",
         tech: "React, Sass, IndexedDB, MaterialUI",
-        isLeft: false
+        direction: "right"
       },
       {
         title:"Pomodoro Timer",
@@ -166,7 +156,7 @@ export class ProjectSection extends React.Component<any,any>{
         imgUrl:pomoImage,
         description:"A simple timer app for measuring focused work time and break time.",
         tech:"React & Sass",
-        isLeft: true
+        direction: "left"
       },
       {
         title:"Random Quote Machine",
@@ -176,7 +166,7 @@ export class ProjectSection extends React.Component<any,any>{
         imgUrl:quoteImage,
         description:"Generates a random quote from a predetermined list. Quote is displayed with a handwritten notecard aesthetic.",
         tech:"React & Sass",
-        isLeft: false
+        direction: "right"
       },
       {
         title:"Markdown Previewer",
@@ -186,7 +176,7 @@ export class ProjectSection extends React.Component<any,any>{
         imgUrl:mdPrevImage,
         description:"Displays a preview of GitHub-flavor markdown as provided.",
         tech:"React, Sass, & Marked.js library",
-        isLeft: true
+        direction: "left"
       },
       {
         title:"Tech Doc Page",
@@ -196,7 +186,7 @@ export class ProjectSection extends React.Component<any,any>{
         imgUrl:techDocPageImage,
         description:"A technical documentation style page.",
         tech:"HTML & CSS",
-        isLeft: false
+        direction: "right"
       },
       {
         title:"JavaScript Calculator",
@@ -206,11 +196,20 @@ export class ProjectSection extends React.Component<any,any>{
         imgUrl:jsCalcImage,
         description:"A basic calculator built with React.js; utilizes immediate execution.",
         tech:"React & Sass",
-        isLeft: true
+        direction: "left"
       },
     ];
     this.openInlineView = this.openInlineView.bind(this);
     this.closeInlineView = this.closeInlineView.bind(this);
+    this.setWinWidth = this.setWinWidth.bind(this);
+  }
+
+  componentDidMount(){
+    window.addEventListener('resize', this.setWinWidth);
+  }
+
+  componentWillUnmount(){
+    window.removeEventListener('resize', this.setWinWidth);
   }
 
   openInlineView(link:string){
@@ -225,8 +224,29 @@ export class ProjectSection extends React.Component<any,any>{
       viewLink: ""
     })
   }
+  setWinWidth(){
+    this.setState({
+      winWidth: window.innerWidth
+    });
+  }
 
   render(){
+    let mutated = this.projects;
+    if(this.state.winWidth <= 700){
+      mutated.forEach((proj)=>{
+        proj.direction = "top"
+      });
+    } else {
+      let isLeft = true;
+      mutated.forEach((proj)=>{
+        if(isLeft){
+          proj.direction = "left";
+        } else {
+          proj.direction = "right";
+        }
+        isLeft = !isLeft;
+      });
+    }
     return(
       <section id="projects">
         {this.state.viewExample && 
@@ -234,7 +254,7 @@ export class ProjectSection extends React.Component<any,any>{
         }
         <h2 className="hidden">Projects</h2>
         <div className="proj-flex">
-          {this.projects.map(item => 
+          {mutated.map(item => 
             <ProjectTile proj={item} key={item.title} openView={this.openInlineView} />
           )}
         </div>
