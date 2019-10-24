@@ -38,33 +38,33 @@ export class ProjectTile extends React.Component<any,any>{
           <div className="project-tile-links">
           { inLink &&
             <span className="internal-example-link" onClick={()=>this.props.openView(this.props.proj)}>
-              {/*<Popup title={<FontAwesomeIcon icon={faEye} />} 
-              content="View this project within this page." />*/}
-              <FontAwesomeIcon icon={faEye} />
+              <Popup title={<FontAwesomeIcon icon={faEye} />} 
+              content="View this project within this page."
+              direction="right" />
             </span>
           }
           { exLink &&
             <a href={exLink} 
               target="_blank" rel='noreferrer noopener'>
-                {/*<Popup title={<FontAwesomeIcon icon={faExternalLinkSquareAlt} />}
-                content="View this project on an external page." />*/}
-                <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
+                <Popup title={<FontAwesomeIcon icon={faExternalLinkSquareAlt} />}
+                content="View this project on an external page."
+                direction="right" />
             </a>
           }
           { codeLink &&
             <a href={codeLink} 
               target="_blank" rel='noreferrer noopener'>
-                {/*<Popup title={<FontAwesomeIcon icon={faCode} />}
-                content="View the code for this project." />*/}
-                <FontAwesomeIcon icon={faCode} />
+                <Popup title={<FontAwesomeIcon icon={faCode} />}
+                content="View the code for this project."
+                direction="right" />
             </a>
           }
           { gitLink &&
             <a href={gitLink} 
               target="_blank" rel='noreferrer noopener'>
-                {/*<Popup title={<FontAwesomeIcon icon={faCodeBranch} />}
-                content="View the source for this project on GitHub." />*/}
-                <FontAwesomeIcon icon={faCodeBranch} />
+                <Popup title={<FontAwesomeIcon icon={faCodeBranch} />}
+                content="View the source for this project on GitHub."
+                direction="right" />
             </a>
           }
         </div>
@@ -96,33 +96,33 @@ export class ProjectTile extends React.Component<any,any>{
           <div className="project-tile-links">
           { inLink &&
             <span className="internal-example-link" onClick={()=>this.props.openView(this.props.proj)}>
-              {/*<Popup title={<FontAwesomeIcon icon={faEye} />} 
-              content="View this project within this page." />*/}
-              <FontAwesomeIcon icon={faEye} />
+              <Popup title={<FontAwesomeIcon icon={faEye} />} 
+              content="View this project within this page."
+              direction="left" />
             </span>
           }
           { exLink &&
             <a href={exLink} 
               target="_blank" rel='noreferrer noopener'>
-                {/*<Popup title={<FontAwesomeIcon icon={faExternalLinkSquareAlt} />}
-                content="View this project on an external page." />*/}
-                <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
+                <Popup title={<FontAwesomeIcon icon={faExternalLinkSquareAlt} />}
+                content="View this project on an external page."
+                direction="left" />
             </a>
           }
           { codeLink &&
             <a href={codeLink} 
               target="_blank" rel='noreferrer noopener'>
-                {/*<Popup title={<FontAwesomeIcon icon={faCode} />}
-                content="View the code for this project." />*/}
-                <FontAwesomeIcon icon={faCode} />
+                <Popup title={<FontAwesomeIcon icon={faCode} />}
+                content="View the code for this project."
+                direction="left" />
             </a>
           }
           { gitLink &&
             <a href={gitLink} 
               target="_blank" rel='noreferrer noopener'>
-                {/*<Popup title={<FontAwesomeIcon icon={faCodeBranch} />}
-                content="View the source for this project on GitHub." />*/}
-                <FontAwesomeIcon icon={faCodeBranch} />
+                <Popup title={<FontAwesomeIcon icon={faCodeBranch} />}
+                content="View the source for this project on GitHub."
+                direction="left" />
             </a>
           }
         </div>
