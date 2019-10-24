@@ -31,13 +31,17 @@ export function Welcome(){
 export function Footer(){
   return(
     <footer id="connect">
+      <a href="https://linkedin.com/in/ceg9498" id="linkedin-profile-link" className="profile-link"
+        target="_blank" rel="noopener noreferrer">
+          LinkedIn
+      </a>
       <a href="https://github.com/ceg9498" id="github-profile-link" className="profile-link"
         target="_blank" rel="noopener noreferrer">
-          View my work on Github
+          Github
       </a>
       <a href="https://twitter.com/ceg9498" id="twitter-profile-link" className="profile-link"
         target="_blank" rel="noopener noreferrer">
-          Twitter: @ceg9498
+          Twitter
       </a>
     </footer>
   );
