@@ -10,6 +10,7 @@ import mdPrevImage from '../Images/markdownPreviewer.png'
 import jsCalcImage from '../Images/jsCalculator.png'
 import techDocPageImage from '../Images/techDocPage.png'
 import translationImage from '../Images/translationPractice.png'
+import todoTimers from '../Images/todoTimers.png'
 
 
 interface pTileProps {
@@ -142,8 +143,8 @@ export class ProjectSection extends React.Component<any,any>{
         title: "Time-out To-dos",
         exLink: "",
         inLink: "",
-        codeLink: "https://github.com/ceg9498/xiv-timers",
-        imgUrl: "",
+        gitLink: "https://github.com/ceg9498/xiv-timers",
+        imgUrl: todoTimers,
         description: "Keep track of your periodical to-do items",
         tech: "React, Sass, IndexedDB, MaterialUI",
         direction: "right"
