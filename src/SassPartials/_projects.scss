@@ -90,18 +90,6 @@
       background-color: $dkgrey;
       border-radius: 0;
     }
-    a:active, .internal-example-link:active {
-      color: white;
-    }
-    a:first-child, .internal-example-link:first-child {
-      box-shadow: none;
-    }
-    a:last-child, .internal-example-link:last-child {
-      box-shadow: none;
-    }
-    a:only-child, .internal-example-link:only-child {
-      box-shadow: none;
-    }
   }
 
 }
