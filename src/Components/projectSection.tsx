@@ -21,70 +21,107 @@ interface pTileProps {
   inLink?:string;
   codeLink?:string;
   gitLink?:string;
+  isLeft:boolean;
 };
 
 export class ProjectTile extends React.Component<any,any>{
   constructor(props:pTileProps){
     super(props);
-    this.state = { isOpen: false, viewExample: false }
-    this.handleHover = this.handleHover.bind(this);
-  }
-  handleHover(){
-    if(this.state.isOpen){
-      this.setState({
-        isOpen: false,
-      });
-    } else {
-      this.setState({
-        isOpen: true,
-      });
-    }
+    this.state = { isOpen: false, viewExample: false };
   }
   render(){
-    let { title, imgUrl, description, tech, exLink, inLink, codeLink, gitLink} = this.props.proj;
+    let { title, imgUrl, description, tech, exLink, inLink, codeLink, gitLink, isLeft} = this.props.proj;
     
     return(
-      <div className="project-tile" 
-        style={{backgroundImage: 'url(' + imgUrl + ')'}}
-        onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
-        <div className="project-tile-info">
-          <h3 className="project-tile-title">{title}</h3>
-          { this.state.isOpen &&
-            <>
-              <p>{description}</p>
-              <p>{tech}</p>
-              <div className="project-tile-links">
-                { inLink &&
-                  <span className="internal-example-link" onClick={()=>this.props.openView(this.props.proj)}>
-                    <Popup title={<FontAwesomeIcon icon={faEye} />} 
-                    content="View this project within this page." />
-                  </span>
-                }
-                { exLink &&
-                  <a href={exLink} 
-                    target="_blank" rel='noreferrer noopener'>
-                      <Popup title={<FontAwesomeIcon icon={faExternalLinkSquareAlt} />}
-                      content="View this project on an external page." />
-                  </a>
-                }
-                { codeLink &&
-                  <a href={exLink} 
-                    target="_blank" rel='noreferrer noopener'>
-                      <Popup title={<FontAwesomeIcon icon={faCode} />}
-                      content="View the code for this project." />
-                  </a>
-                }
-                { gitLink &&
-                  <a href={exLink} 
-                    target="_blank" rel='noreferrer noopener'>
-                      <Popup title={<FontAwesomeIcon icon={faCodeBranch} />}
-                      content="View the source for this project on GitHub." />
-                  </a>
-                }
-              </div>
-            </>
+      <div className="project-tile">
+        {isLeft &&
+          <div className="project-tile-links">
+          { inLink &&
+            <span className="internal-example-link" onClick={()=>this.props.openView(this.props.proj)}>
+              {/*<Popup title={<FontAwesomeIcon icon={faEye} />} 
+              content="View this project within this page." />*/}
+              <FontAwesomeIcon icon={faEye} />
+            </span>
+          }
+          { exLink &&
+            <a href={exLink} 
+              target="_blank" rel='noreferrer noopener'>
+                {/*<Popup title={<FontAwesomeIcon icon={faExternalLinkSquareAlt} />}
+                content="View this project on an external page." />*/}
+                <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
+            </a>
+          }
+          { codeLink &&
+            <a href={exLink} 
+              target="_blank" rel='noreferrer noopener'>
+                {/*<Popup title={<FontAwesomeIcon icon={faCode} />}
+                content="View the code for this project." />*/}
+                <FontAwesomeIcon icon={faCode} />
+            </a>
+          }
+          { gitLink &&
+            <a href={exLink} 
+              target="_blank" rel='noreferrer noopener'>
+                {/*<Popup title={<FontAwesomeIcon icon={faCodeBranch} />}
+                content="View the source for this project on GitHub." />*/}
+                <FontAwesomeIcon icon={faCodeBranch} />
+            </a>
           }
         </div>
+        }
+        {isLeft &&
+          <div className="project-tile-image" style={{backgroundImage: `url(${imgUrl})`}}>
+            {/** Empty; let the bg image speak */}
+          </div>
+        }
+        <div className="project-tile-info">
+          <h3 className="project-tile-title">{title}</h3>
+          <div className="project-description">
+            <p>{tech}</p>
+            <p>{description}</p>
+          </div>
+        </div>
+        
+        {!isLeft &&
+          <div className="project-tile-image" style={{backgroundImage: `url(${imgUrl})`}}>
+            {/** Empty; let the bg image speak */}
+          </div>
+        }
+        {!isLeft &&
+          <div className="project-tile-links">
+          { inLink &&
+            <span className="internal-example-link" onClick={()=>this.props.openView(this.props.proj)}>
+              {/*<Popup title={<FontAwesomeIcon icon={faEye} />} 
+              content="View this project within this page." />*/}
+              <FontAwesomeIcon icon={faEye} />
+            </span>
+          }
+          { exLink &&
+            <a href={exLink} 
+              target="_blank" rel='noreferrer noopener'>
+                {/*<Popup title={<FontAwesomeIcon icon={faExternalLinkSquareAlt} />}
+                content="View this project on an external page." />*/}
+                <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
+            </a>
+          }
+          { codeLink &&
+            <a href={exLink} 
+              target="_blank" rel='noreferrer noopener'>
+                {/*<Popup title={<FontAwesomeIcon icon={faCode} />}
+                content="View the code for this project." />*/}
+                <FontAwesomeIcon icon={faCode} />
+            </a>
+          }
+          { gitLink &&
+            <a href={exLink} 
+              target="_blank" rel='noreferrer noopener'>
+                {/*<Popup title={<FontAwesomeIcon icon={faCodeBranch} />}
+                content="View the source for this project on GitHub." />*/}
+                <FontAwesomeIcon icon={faCodeBranch} />
+            </a>
+          }
+        </div>
+        }
       </div>
     );
   }
@@ -97,22 +134,24 @@ export class ProjectSection extends React.Component<any,any>{
     this.state = { viewExample:false, viewLink: "" }
     this.projects = [
       {
-        title:"Tech Doc Page",
-        exLink:"https://codepen.io/ceg9498/full/pXbrqp",
-        inLink: "", // techDocPage
-        codeLink: "https://codepen.io/ceg9498/pen/pXbrqp",
-        imgUrl:techDocPageImage,
-        description:"A technical documentation style page.",
-        tech:"HTML & CSS"
-      },
-      {
         title:"Translation Practice App",
         exLink:"https://thaliak.herokuapp.com/",
         inLink: "",
         gitLink: "https://github.com/ceg9498/thaliak-xltn",
         imgUrl:translationImage,
         description:"An app that facilitates practicing translation of natural languages.",
-        tech:"React, TypeScript, & CSS"
+        tech:"React, TypeScript, & CSS",
+        isLeft: true
+      },
+      {
+        title: "Time-out To-dos",
+        exLink: "",
+        inLink: "",
+        codeLink: "https://github.com/ceg9498/xiv-timers",
+        imgUrl: "",
+        description: "Keep track of your periodical to-do items",
+        tech: "React, Sass, IndexedDB, MaterialUI",
+        isLeft: false
       },
       {
         title:"Pomodoro Timer",
@@ -121,7 +160,8 @@ export class ProjectSection extends React.Component<any,any>{
         codeLink:"https://codepen.io/ceg9498/pen/aboOYQG",
         imgUrl:pomoImage,
         description:"A simple timer app for measuring focused work time and break time.",
-        tech:"React & Sass"
+        tech:"React & Sass",
+        isLeft: true
       },
       {
         title:"Random Quote Machine",
@@ -129,8 +169,9 @@ export class ProjectSection extends React.Component<any,any>{
         inLink:"quoteMachine",
         codeLink: "https://codepen.io/ceg9498/pen/JjPYNjP",
         imgUrl:quoteImage,
-        description:"Generates a random quote from a predetermined list. Quote is displayed with a handwritten notecard aesthetic.",
-        tech:"React & Sass"
+        description:"Generates a random quote from a predetermined list. Quote is displayed with a handwritten notecard aesthetic. LOREM IPSUM: Generates a random quote from a predetermined list. Quote is displayed with a handwritten notecard aesthetic. Generates a random quote from a predetermined list. Quote is displayed with a handwritten notecard aesthetic.",
+        tech:"React & Sass",
+        isLeft: false
       },
       {
         title:"Markdown Previewer",
@@ -139,7 +180,18 @@ export class ProjectSection extends React.Component<any,any>{
         codeLink: "https://codepen.io/ceg9498/pen/vYBGVKB",
         imgUrl:mdPrevImage,
         description:"Displays a preview of GitHub-flavor markdown as provided.",
-        tech:"React, Sass, & Marked.js library"
+        tech:"React, Sass, & Marked.js library",
+        isLeft: true
+      },
+      {
+        title:"Tech Doc Page",
+        exLink:"https://codepen.io/ceg9498/full/pXbrqp",
+        inLink: "", // techDocPage
+        codeLink: "https://codepen.io/ceg9498/pen/pXbrqp",
+        imgUrl:techDocPageImage,
+        description:"A technical documentation style page.",
+        tech:"HTML & CSS",
+        isLeft: false
       },
       {
         title:"JavaScript Calculator",
@@ -148,7 +200,8 @@ export class ProjectSection extends React.Component<any,any>{
         codeLink: "https://codepen.io/ceg9498/pen/PoYNagj",
         imgUrl:jsCalcImage,
         description:"A basic calculator built with React.js; utilizes immediate execution.",
-        tech:"React & Sass"
+        tech:"React & Sass",
+        isLeft: true
       },
     ];
     this.openInlineView = this.openInlineView.bind(this);
