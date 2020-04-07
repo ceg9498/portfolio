@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Welcome, Footer } from './Components/Components'
+import { Navbar, Welcome } from './Components/Components'
 import { ProjectSection } from './Components/projectSection'
 import './App.scss';
 
@@ -10,8 +10,6 @@ const App: React.FC = () => {
       <Welcome />
 
       <ProjectSection />
-      
-      <Footer />
     </article>
   );
 }

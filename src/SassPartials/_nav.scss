@@ -8,6 +8,12 @@
 
   background-color: change-color($color: $dkgrey, $alpha: 0.8);
 
+  display: flex;
+
+  .flex-grow {
+    flex-grow: 1;
+  }
+
   ul {
     list-style: none;
     display: flex;
@@ -15,30 +21,44 @@
     padding: 0px;
     margin: 0px;
   }
-  li {
+  #nav-links li {
     display: inline-block;
     margin: 0px;
     padding: 0px;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      background: $dkgrey;
+      color: $ltgreen;
+      padding: 10px 20px;
+      margin-right: 7px;
+      border-right: 2px solid $ltgreen;
+      border-left: 2px solid $ltgreen;
+      border-bottom: 2px solid $ltgreen;
+    }
+    a:hover, a:focus {
+      background-color: $dkgreen;
+      color: white;
+      box-shadow: inset 1px 1px 5px $dkgrey;
+    }
+    #a-welcome {
+      color:white;
+      font-weight:bold;
+    }
   }
-  a {
-    display: inline-block;
-    text-decoration: none;
-    background: $dkgrey;
-    color: $ltgreen;
-    padding: 10px 20px;
-    margin-right: 7px;
-    border-right: 2px solid $ltgreen;
-    border-left: 2px solid $ltgreen;
-    border-bottom: 2px solid $ltgreen;
-  }
-  a:hover, a:focus {
-    background-color: $dkgreen;
-    color: white;
-    box-shadow: inset 1px 1px 5px $dkgrey;
-  }
-  #a-welcome {
-    color:white;
-    font-weight:bold;
+  ul#connect {
+    a {
+      display: inline-block;
+      margin: 5px 10px;
+      text-decoration: none;
+      font-size: 2em;
+      color: $ltgreen;
+    }
+
+    a:hover {
+      color: $ltgrey;
+    }
   }
 }
 /*
