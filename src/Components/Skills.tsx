@@ -2,7 +2,7 @@ import React from 'react'
 import {SkillCard as Card} from './Card'
 import color from '../data/techColors'
 import skills from '../data/skills.json'
-import styles from './Skills.module.css'
+import styles from './Skills.module.scss'
 
 export class Skills extends React.PureComponent {
 	render() {

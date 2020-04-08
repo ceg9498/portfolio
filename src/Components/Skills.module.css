@@ -1,9 +1,0 @@
-.skills {
-	min-height: 100vh;
-	padding: 50px 10px 50px 10px;
-}
-
-.deck {
-	display: flex;
-	flex-wrap: wrap;
-}
