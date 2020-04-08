@@ -48,8 +48,8 @@
 	margin-bottom: 5px;
 	width: 100%;
 }
-.projectCard:hover .description,
-.projectCard:focus .description {
+.projectCard:hover .projectDescription,
+.projectCard:focus .projectDescription {
 	display: block;
 }
 .linkIcon {
