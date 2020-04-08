@@ -1,6 +1,7 @@
 import React from 'react'
 import projects from '../data/projects.json'
 import {ProjectCard as Card} from './Card'
+import styles from './Project.module.scss'
 
 import pomoImage from '../Images/pomodoroTimer.png'
 import quoteImage from '../Images/quoteMachine.png'
@@ -27,9 +28,9 @@ const images = {
 export class ProjectSection extends React.Component<any,any>{
   render(){
     return(
-      <section id="projects">
+      <section id="projects" className={styles.projects}>
         <h2 className="hidden">Projects</h2>
-        <div className="proj-flex">
+        <div className={styles.projFlex}>
           {projects.map(item => {
             item.image = images[item.image]
             return (<Card key={item.title} {...item} />)

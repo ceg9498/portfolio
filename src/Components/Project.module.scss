@@ -1,5 +1,6 @@
+@import '../SassPartials/colors';
 
-#projects {
+.projects {
   min-height: 100vh;
   background-color: $dkgreen;
   background-image: repeating-linear-gradient(
@@ -8,9 +9,28 @@
     transparent 1px, transparent 4px);
   padding: 50px 10px 50px 10px;
 }
-.proj-flex {
+
+.projFlex {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+}
+
+.footer {
+	min-height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: $dkgrey;
+}
+
+.header {
+	font-size: 2em;
+	padding-bottom: 20px;
+}
+
+.content {
+	font-size: 1.5em;
 }
