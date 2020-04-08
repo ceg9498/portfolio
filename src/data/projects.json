@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Translation Practice App",
+    "view": "https://thaliak.herokuapp.com/",
+    "codepen": "",
+    "github": "https://github.com/ceg9498/thaliak-xltn",
+    "image": "translationImage",
+    "description": "An app that facilitates practicing translation of natural languages.",
+    "tech": ["React", "TypeScript", "CSS"]
+  },
+  {
+    "title": "#10for20challenge",
+    "view": "https://ceg9498.github.io/10for20challenge/",
+    "codepen": "",
+    "github": "https://github.com/ceg9498/10for20challenge",
+    "image": "challenge10for20",
+    "description": "A tracker for challenge progress",
+    "tech": ["React", "D3.js", "TypeScript"]
+  },
+  {
+    "title": "Time-out To-dos",
+    "view": "https://ceg9498.github.io/todo-timers/",
+    "codepen": "",
+    "github": "https://github.com/ceg9498/todo-timers",
+    "image": "todoTimers",
+    "description": "Keep track of your periodical to-do items",
+    "tech": ["React", "Sass", "IndexedDB", "MaterialUI"]
+  },
+  {
+    "title": "Kurika Tasks",
+    "view": "https://ceg9498.github.io/kurika-tasks/",
+    "codepen": "",
+    "github": "https://github.com/ceg9498/kurika-tasks",
+    "image": "kurikaTasks",
+    "description": "Keep track of your periodical to-do items",
+    "tech": ["Angular", "IndexedDB", "Bootstrap"]
+  },
+  {
+    "title": "Pomodoro Timer",
+    "view": "https://codepen.io/ceg9498/full/aboOYQG",
+    "codepen": "https://codepen.io/ceg9498/pen/aboOYQG",
+    "github": "",
+    "image": "pomoImage",
+    "description": "A simple timer app for measuring focused work time and break time.",
+    "tech": ["React", "Sass"]
+  },
+  {
+    "title": "Random Quote Machine",
+    "view": "https://codepen.io/ceg9498/full/JjPYNjP",
+    "codepen": "https://codepen.io/ceg9498/pen/JjPYNjP",
+    "github": "",
+    "image": "quoteImage",
+    "description": "Generates a random quote from a predetermined list. Quote is displayed with a handwritten notecard aesthetic.",
+    "tech": ["React", "Sass"]
+  },
+  {
+    "title": "Markdown Previewer",
+    "view": "https://codepen.io/ceg9498/full/vYBGVKB",
+    "codepen": "https://codepen.io/ceg9498/pen/vYBGVKB",
+    "github": "",
+    "image": "mdPrevImage",
+    "description": "Displays a preview of GitHub-flavor markdown as provided.",
+    "tech": ["React", "Sass", "Marked.js"]
+  },
+  {
+    "title": "Tech Doc Page",
+    "view": "https://codepen.io/ceg9498/full/pXbrqp",
+    "codepen": "https://codepen.io/ceg9498/pen/pXbrqp",
+    "github": "",
+    "image": "techDocPageImage",
+    "description": "A technical documentation style page.",
+    "tech": ["HTML", "CSS"]
+  },
+  {
+    "title": "JavaScript Calculator",
+    "view": "https://codepen.io/ceg9498/full/PoYNagj",
+    "codepen": "https://codepen.io/ceg9498/pen/PoYNagj",
+    "github": "",
+    "image": "jsCalcImage",
+    "description": "A basic calculator built with React.js; utilizes immediate execution.",
+    "tech": ["React", "Sass"]
+  }
+]
