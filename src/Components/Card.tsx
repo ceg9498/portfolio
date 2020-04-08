@@ -49,17 +49,17 @@ function Links(props: {view: string, codepen: string, github: string}) {
 	return (
 		<div>
 			{props.view &&
-				<a href={props.view} className={styles.linkIcon}>
+				<a href={props.view} className={styles.linkIcon} title="View sample">
 					<FontAwesomeIcon icon={faGlobe} />
 				</a>
 			}
 			{props.github &&
-				<a href={props.github} className={styles.linkIcon}>
+				<a href={props.github} className={styles.linkIcon} title="View code on Github">
 					<FontAwesomeIcon icon={faGithub} />
 				</a>
 			}
 			{props.codepen &&
-				<a href={props.codepen} className={styles.linkIcon}>
+				<a href={props.codepen} className={styles.linkIcon} title="View sample &amp; code on Codepen">
 					<FontAwesomeIcon icon={faCodepen} />
 				</a>
 			}
