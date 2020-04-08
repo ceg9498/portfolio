@@ -1,8 +1,8 @@
 import React from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCheck, faTimes} from '@fortawesome/free-solid-svg-icons'
-import {SkillCard as Card} from './Card'
-import skills from '../data/skills.json'
+import {SkillCard as Card} from '../Card/Card'
+import skills from '../../data/skills.json'
 import styles from './Skills.module.scss'
 
 export class Skills extends React.PureComponent<any, any> {

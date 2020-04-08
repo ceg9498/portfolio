@@ -2,8 +2,8 @@ import React from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faGlobe} from '@fortawesome/free-solid-svg-icons'
 import {faGithub, faCodepen} from '@fortawesome/free-brands-svg-icons'
-import {Label} from './Label'
-import {tech as techColor, type as typeColor} from '../data/techColors'
+import {Label} from '../Label/Label'
+import {tech as techColor, type as typeColor} from '../../data/techColors'
 import styles from './Card.module.css'
 
 interface ProjectProps {
