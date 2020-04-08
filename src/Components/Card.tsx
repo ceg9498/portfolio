@@ -5,7 +5,7 @@ import {faGithub, faCodepen} from '@fortawesome/free-brands-svg-icons'
 import {Label} from './Label'
 import styles from './Card.module.css'
 
-interface Props {
+interface ProjectProps {
 	image: string,
 	title: string,
 	description: string,
@@ -15,7 +15,25 @@ interface Props {
 	github: string,
 }
 
-export class Card extends React.PureComponent<Props> {
+interface SkillProps {
+	title: string,
+	color: string,
+	info: string,
+}
+
+export function SkillCard(props: SkillProps){
+	return(
+		<div className={styles.skillsCard}>
+		 <div className={styles.skillsHeader}>
+			<h4>{props.title}</h4>
+			<Label as="button" text="projects" color={props.color} />
+		 </div>
+		 <span className={styles.skillsDescription}>{props.info}</span>
+		</div>
+	);
+ }
+
+export class ProjectCard extends React.PureComponent<ProjectProps> {
 	render(){
 		const project = this.props
 		return(
@@ -29,17 +47,17 @@ export class Card extends React.PureComponent<Props> {
 	}
 }
 
-function Info(props: {details: Props}){
+function Info(props: {details: ProjectProps}){
 	const { details } = props;
 	return(
-		<div className={styles.info}>
-		 <h3 className={styles.title}>{details.title}</h3>
+		<div className={styles.projectInfo}>
+		 <h3 className={styles.projectTitle}>{details.title}</h3>
 		 <div className={styles.tech}>
 			 {details.tech.map((tech)=>
 				 <Label text={tech} />
 			 )}
 		 </div>
-		 <span className={styles.description}>{details.description}</span>
+		 <span className={styles.projectDescription}>{details.description}</span>
 			<Links view={details.view} codepen={details.codepen} github={details.github} />
 		</div>
 	);
