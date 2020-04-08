@@ -5,4 +5,13 @@
   font-size: 0.75em;
   background-color: #aaa;
   color: #333;
+  align-self: center;
+}
+
+button.label {
+  border-width: 0;
+  font-family: inherit;
+}
+button.label:hover, button.label:focus {
+ box-shadow: inset 0px 0px 5px #333;
 }

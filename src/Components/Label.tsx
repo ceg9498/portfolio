@@ -3,15 +3,18 @@ import styles from './Label.module.css'
 import colors from '../data/techColors'
 
 interface Props {
+  as?: React.ReactType,
+  color?: string,
   text: string,
 }
 
 export function Label(props: Props) {
-  const {text} = props
+  const {as: Component = 'span', color, text} = props
+  const background = {backgroundColor: color ? color : colors.get(text)}
 
   return(
-    <span className={styles.label} style={{backgroundColor: colors.get(text)}}>
+    <Component className={styles.label} style={background}>
       {text}
-    </span>
+    </Component>
   )
 }
