@@ -3,6 +3,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faGlobe} from '@fortawesome/free-solid-svg-icons'
 import {faGithub, faCodepen} from '@fortawesome/free-brands-svg-icons'
 import {Label} from './Label'
+import {tech as techColor, type as typeColor} from '../data/techColors'
 import styles from './Card.module.css'
 
 interface ProjectProps {
@@ -17,8 +18,8 @@ interface ProjectProps {
 
 interface SkillProps {
 	title: string,
-	color: string,
 	info: string,
+	type: string,
 }
 
 export function SkillCard(props: SkillProps){
@@ -26,7 +27,7 @@ export function SkillCard(props: SkillProps){
 		<div className={styles.skillsCard}>
 		 <div className={styles.skillsHeader}>
 			<h4>{props.title}</h4>
-			<Label as="button" text="projects" color={props.color} />
+			<Label text={props.type} color={typeColor.get(props.type)} />
 		 </div>
 		 <span className={styles.skillsDescription}>{props.info}</span>
 		</div>
@@ -54,7 +55,7 @@ function Info(props: {details: ProjectProps}){
 		 <h3 className={styles.projectTitle}>{details.title}</h3>
 		 <div className={styles.tech}>
 			 {details.tech.map((tech)=>
-				 <Label text={tech} />
+				 <Label text={tech} color={techColor.get(tech)} />
 			 )}
 		 </div>
 		 <span className={styles.projectDescription}>{details.description}</span>
