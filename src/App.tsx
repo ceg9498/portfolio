@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Welcome } from './Components/Components'
+import { Footer } from './Components/Footer'
 import { ProjectSection } from './Components/projectSection'
 import { Skills } from './Components/Skills'
 import './App.scss';
@@ -11,6 +12,7 @@ const App: React.FC = () => {
       <Welcome />
       <Skills />
       <ProjectSection />
+      <Footer />
     </article>
   );
 }

@@ -12,6 +12,8 @@ export function Navbar(){
           <a href="#skills" id="a-skill">Skills</a>
         </li><li>
           <a href="#projects" id="a-proj">Projects</a>
+        </li><li>
+          <a href="#contact" id="a-contact">Contact</a>
         </li>
       </ul>
       <div className="flex-grow" />
