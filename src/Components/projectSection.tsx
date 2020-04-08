@@ -1,6 +1,6 @@
 import React from 'react'
 import projects from '../data/projects.json'
-import {Card} from './Card'
+import {ProjectCard as Card} from './Card'
 
 import pomoImage from '../Images/pomodoroTimer.png'
 import quoteImage from '../Images/quoteMachine.png'
