@@ -48,7 +48,7 @@ function Footer(){
     <div className={styles.footer}>
       <span className={styles.header}>Looking for more?</span>
       <p className={styles.content}>The projects listed here are just a sample</p>
-      <p className={styles.content}>You can see more by visiting my profile on <Link href="https://github.com/ceg9498">Github</Link> or <Link href="https://codepen.io/ceg9498">Codepen</Link>.</p>
+      <p className={styles.content}>You can see more by visiting my profile on <Link href="https://github.com/ceg9498" mode="dark">Github</Link> or <Link href="https://codepen.io/ceg9498" mode="dark">Codepen</Link>.</p>
     </div>
   )
 }

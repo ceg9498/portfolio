@@ -1,10 +1,21 @@
 @import '../../SassPartials/colors';
 
 .link {
-	color: $ltgrey;
 	text-decoration-style: dotted;
 }
-.link:hover,
-.link:focus {
+
+.light {
+	color: $ltgrey;
+}
+.light:hover,
+.light:focus {
 	color: $ltgreen;
+}
+
+.dark {
+	color: $mdgrey;
+}
+.dark:hover,
+.dark:focus {
+	color: $dkgrey;
 }

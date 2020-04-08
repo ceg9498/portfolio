@@ -1,11 +1,18 @@
+import classNames from 'classnames'
 import React from 'react'
 import styles from './Link.module.scss'
 
-export function Link(props: {href: string, children: any}) {
-	const {href, children} = props;
+interface Props {
+	href: string,
+	mode?: 'light' | 'dark',
+	children: any,
+}
+
+export function Link(props: Props) {
+	const {href, mode = 'light', children} = props;
 	return(
 		<a
-			className={styles.link}
+			className={classNames(styles.link, styles[mode])}
 			href={href}
 			target="_blank" rel="noopener noreferrer"
 		>
