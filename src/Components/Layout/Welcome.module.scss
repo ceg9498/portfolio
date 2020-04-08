@@ -38,7 +38,9 @@
 	grid-area: photo;
 	width: 250px;
 	height: 250px;
-	background-color: $mdgrey;
+  background-color: $mdgrey;
+  background-position: center;
+  background-size: cover;
 }
 .greeting {
   font-size: 20vh;
