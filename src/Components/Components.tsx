@@ -9,6 +9,8 @@ export function Navbar(){
         <li>
           <a href="#welcome-section" id="a-welcome">Emily&nbsp;Gagne</a>
         </li><li>
+          <a href="#skills" id="a-skill">Skills</a>
+        </li><li>
           <a href="#projects" id="a-proj">Projects</a>
         </li>
       </ul>
