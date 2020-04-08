@@ -1,0 +1,47 @@
+[
+	{
+	 "title": "JavaScript",
+	 "type": "language",
+	 "info": "Primarily used with React; I am also familiar with vanilla JS."
+	},
+	{
+	 "title": "HTML",
+	 "type": "language",
+	 "info": "I've been writing vanilla HTML since the early 2000s with HTML4. I'm excited to see what the future holds for this."
+	},
+	{
+	 "title": "TypeScript",
+	 "type": "language",
+	 "info": "Used with both React & Angular."
+	},
+	{
+	 "title": "CSS",
+	 "type": "language",
+	 "info": "I've been writing vanilla CSS since the early 2000s. I am also familiar with some CSS frameworks & libraries, such as Sass and CSS Modules."
+	},
+	{
+		"title": "React",
+		"type": "framework",
+		"info": "I believe React's greatest strength is in its flexibility - it doesn't require your project to be structured in any particular way."
+	 },
+	 {
+		"title": "Angular",
+		"type": "framework",
+		"info": "My favorite part about Angular is that it forces your project to be well-structured and modular."
+	 },
+	 {
+		"title": "D3.js",
+		"type": "library",
+		"info": "Basic graphing, creating a calendar heatmap."
+	 },
+	 {
+		"title": "MongoDB",
+		"type": "database",
+		"info": "I use MongoDB for any of my personal projects that require centralized data storage."
+	 },
+	 {
+		"title": "IndexedDB",
+		"type": "database",
+		"info": "I use IndexedDB most of my personal projects that require data storage, as long as it doesn't need to be centralized or available anywhere. I like that the data is stored on the client, giving the user more control."
+	 }
+ ]
