@@ -52,13 +52,13 @@ function Info(props: {details: ProjectProps}){
 	const { details } = props;
 	return(
 		<div className={styles.projectInfo}>
-		 <h3 className={styles.projectTitle}>{details.title}</h3>
-		 <div className={styles.tech}>
-			 {details.tech.map((tech)=>
-				 <Label text={tech} color={techColor.get(tech)} />
-			 )}
-		 </div>
-		 <span className={styles.projectDescription}>{details.description}</span>
+			<h3 className={styles.projectTitle}>{details.title}</h3>
+			<div className={styles.tech}>
+				{details.tech.map((tech)=>
+					<Label text={tech} color={techColor.get(tech)} />
+				)}
+			</div>
+			<span className={styles.projectDescription}>{details.description}</span>
 			<Links view={details.view} codepen={details.codepen} github={details.github} />
 		</div>
 	);
