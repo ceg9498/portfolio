@@ -1,0 +1,10 @@
+@import '../SassPartials/colors';
+
+.link {
+	color: $ltgrey;
+	text-decoration-style: dotted;
+}
+.link:hover,
+.link:focus {
+	color: $ltgreen;
+}

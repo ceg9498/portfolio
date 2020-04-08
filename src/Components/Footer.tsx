@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Footer.module.scss'
+import {Link} from './Link'
 
 export function Footer(){
   return(
@@ -9,17 +10,4 @@ export function Footer(){
       <p className={styles.content}>Contact me on <Link href="https://github.com/ceg9498">Twitter</Link> or <Link href="https://linkedin.com/in/ceg9498">LinkedIn</Link>!</p>
     </footer>
   )
-}
-
-function Link(props: {href: string, children: any}) {
-	const {href, children} = props;
-	return(
-		<a
-			className={styles.link}
-			href={href}
-			target="_blank" rel="noopener noreferrer"
-		>
-			{children}
-		</a>
-	)
 }
