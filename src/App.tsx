@@ -1,9 +1,9 @@
 import React from 'react';
-import { Welcome } from './Components/Layout/Welcome'
 import { Navbar } from './Components/Layout/Navbar'
-import { Footer } from './Components/Layout/Footer'
-import { ProjectSection } from './Components/Projects/Projects'
+import { Welcome } from './Components/Layout/Welcome'
 import { Skills } from './Components/Skills/Skills'
+import { ProjectSection } from './Components/Projects/Projects'
+import { Footer } from './Components/Layout/Footer'
 import './App.scss';
 
 const App: React.FC = () => {
