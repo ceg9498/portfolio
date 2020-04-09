@@ -1,27 +1,18 @@
 import React from 'react'
+import {EventCard as Event} from '../Card/index'
 import styles from './Experience.module.scss'
 
 export function Experience() {
 	return(
 		<section id="experience" className={styles.experience}>
 			<h2 className="hidden">Experience</h2>
-			{experiences.map(event => 
-				<Event {...event} />
-			)}
+			<div className={styles.deck}>
+				{experiences.map(event => 
+					<Event {...event} />
+				)}
+			</div>
 		</section>
 	)
-}
-
-function Event(props: {date: string, events: string[]}) {
-	const {date, events} = props
-	return(<>
-		<h3>{date}</h3>
-		<ul>
-			{events.map(event =>
-				<li>{event}</li>
-			)}
-		</ul>
-	</>)
 }
 
 const experiences = [

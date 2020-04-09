@@ -8,13 +8,19 @@
     change-color($color: $ltgreen, $alpha: 0.1),
     change-color($color: $ltgreen, $alpha: 0.1),
     transparent 1px, transparent 4px);
-  padding: 50px 10px 50px 50px;
+  padding: 50px 10px 50px 10px;
 
   ul {
     list-style-type: '-  ';
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   h3 {
     font-size: 1.5em;
   }
+}
+
+.deck {
+  display: flex;
+  flex-direction: column;
 }
