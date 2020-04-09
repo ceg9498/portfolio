@@ -1,7 +1,7 @@
 import React from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCheck, faTimes} from '@fortawesome/free-solid-svg-icons'
-import {SkillCard as Card} from '../Card/Card'
+import {SkillCard as Card} from '../Card/index'
 import skills from '../../data/skills.json'
 import styles from './Skills.module.scss'
 

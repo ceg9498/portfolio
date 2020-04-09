@@ -1,6 +1,7 @@
 @import '../../SassPartials/colors';
 
 .projects {
+	color: $dkgrey;
   min-height: 100vh;
   background-color: $dkgreen;
   background-image: repeating-linear-gradient(
@@ -23,12 +24,12 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: $dkgrey;
 }
 
 .header {
 	font-size: 2em;
-	padding-bottom: 20px;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 .content {

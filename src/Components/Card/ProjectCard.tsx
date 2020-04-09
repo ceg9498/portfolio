@@ -3,7 +3,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faGlobe} from '@fortawesome/free-solid-svg-icons'
 import {faGithub, faCodepen} from '@fortawesome/free-brands-svg-icons'
 import {Label} from '../Label/Label'
-import {tech as techColor, type as typeColor} from '../../data/techColors'
+import {tech as techColor} from '../../data/techColors'
 import styles from './Card.module.css'
 
 interface ProjectProps {
@@ -16,36 +16,15 @@ interface ProjectProps {
 	github: string,
 }
 
-interface SkillProps {
-	title: string,
-	info: string,
-	type: string,
-}
-
-export function SkillCard(props: SkillProps){
+export function ProjectCard(props: ProjectProps) {
 	return(
-		<div className={styles.skillsCard}>
-		 <div className={styles.skillsHeader}>
-			<h4>{props.title}</h4>
-			<Label text={props.type} color={typeColor.get(props.type)} />
-		 </div>
-		 <span className={styles.skillsDescription}>{props.info}</span>
+		<div className={styles.projectCard}
+			tabIndex={1}
+			style={{backgroundImage: `url('${props.image}')`}}
+		>
+			<Info details={props} />
 		</div>
 	);
- }
-
-export class ProjectCard extends React.PureComponent<ProjectProps> {
-	render(){
-		const project = this.props
-		return(
-			<div className={styles.projectCard}
-				tabIndex={1}
-				style={{backgroundImage: `url('${project.image}')`}}
-			>
-			<Info details={project} />
-			</div>
-		);
-	}
 }
 
 function Info(props: {details: ProjectProps}){
