@@ -8,8 +8,8 @@ export function Navbar(){
       <ul role="navigation" id="nav-links">
         <li>
           <a href="#welcome-section" id="a-welcome">Emily&nbsp;Gagne</a>
-        {/* </li><li>
-          <a href="#experience">Experience</a> */}
+        </li><li>
+          <a href="#experience">Experience</a>
         </li><li>
           <a href="#skills">Skills</a>
         </li><li>
