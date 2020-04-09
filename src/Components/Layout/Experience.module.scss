@@ -1,0 +1,11 @@
+@import '../../SassPartials/colors';
+
+.experience {
+	min-height: 100vh;
+  background-color: $dkgreen;
+  background-image: repeating-linear-gradient(
+    change-color($color: $ltgreen, $alpha: 0.1),
+    change-color($color: $ltgreen, $alpha: 0.1),
+    transparent 1px, transparent 4px);
+  padding: 50px 10px 50px 10px;
+}
