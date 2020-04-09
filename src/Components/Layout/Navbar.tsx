@@ -5,7 +5,7 @@ import {faLinkedin, faGithubSquare, faTwitterSquare} from '@fortawesome/free-bra
 export function Navbar(){
   return(
     <nav id="main-nav">
-      <ul role="navigation" id="nav-links">
+      <ul role="navigation" id="nav-links" className="flex-grow">
         <li>
           <a href="#welcome-section" id="a-welcome">Emily&nbsp;Gagne</a>
         </li><li>
@@ -18,7 +18,6 @@ export function Navbar(){
           <a href="#contact" id="a-contact">Contact</a>
         </li>
       </ul>
-      <div className="flex-grow" />
       <ul id="connect">
         <li>
           <a href="https://linkedin.com/in/ceg9498" id="linkedin-profile-link" className="profile-link"

@@ -23,32 +23,3 @@ body {
   position: absolute;
   z-index: -20;
 }
-
-// Adjust Navbar 
-@media only screen and (max-width: 500px){
-  #navbar {
-    border-bottom: 1px solid $dkgreen;
-    width: 100vh;
-    height: 25px;
-    right: 100vw;
-    transform: rotate(-90deg);
-    transform-origin: 100% 0;
-
-    ul {
-      width: 100%;
-      flex-flow: row-reverse nowrap;
-      justify-items: flex-end;
-    }
-    a {
-      position: relative;
-      top: -5px;
-    }
-    a:hover, a:focus {
-      padding-top: 20px;
-    }
-  }
-
-  #projects, #skills {
-    padding-left: 30px;
-  }
-}

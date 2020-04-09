@@ -48,9 +48,11 @@
     }
   }
   ul#connect {
+    li {
+      padding: 5px 10px;
+    }
     a {
       display: inline-block;
-      margin: 5px 10px;
       text-decoration: none;
       font-size: 2em;
       color: $ltgreen;
@@ -61,9 +63,9 @@
     }
   }
 }
-/*
+
 // Adjust Navbar 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 775px){
   #main-nav {
     border-bottom: 1px solid $dkgreen;
     width: 100vh;
@@ -73,7 +75,6 @@
     transform-origin: 100% 0;
 
     ul {
-      width: 100%;
       flex-flow: row-reverse nowrap;
       justify-items: flex-end;
     }
@@ -83,14 +84,32 @@
     }
     a:hover, a:focus {
       padding-top: 20px;
+      top: 0px;
     }
   }
 
-  #projects {
-    padding-left: 30px;
+  ul#connect {
+    display: block;
+    position: absolute;
+    top: calc(100vw - 130px);
+    right: -1px;
+    background-color: $dkgrey;
+    border-radius: 5px 0 0 0;
+
+    li {
+      transform: rotate(90deg);
+      padding: 5px;
+      padding-top: 6px;
+    }
+    a {
+      top: 0;
+    }
+    a:hover, a:focus {
+      padding-top: 0;
+    }
   }
-  #connect {
-    padding-left: 30px;
+
+  header, section, footer {
+    padding-left: 40px !important;
   }
 }
-*/

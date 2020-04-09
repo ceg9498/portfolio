@@ -2,9 +2,8 @@
 
 
 .section {
-  box-sizing: border-box;
   min-height: 100vh;
-  width: 75%;
+  max-width: 75%;
 	margin: 0px auto;
 	padding-top: 25vh;
 }
@@ -43,7 +42,7 @@
   background-size: cover;
 }
 .greeting {
-  font-size: 20vh;
+  font-size: 200px;
   grid-area: greet;
   align-self: end;
 
@@ -62,7 +61,10 @@
 }
 
 // re-arrange welcome section
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 775px){
+  .section {
+    padding-top: 10vh;
+  }
   .grid {
     grid-template:
       "."
@@ -72,18 +74,17 @@
       "tagline";
     grid-template-rows: .25fr auto .25fr auto auto;
     align-content: center;
-	}
-	.photo {
-		justify-self: center;
-	}
-}
-
-// Re-size welcome section text 
-@media only screen and (max-width: 380px){
+  }
+  .greeting {
+    font-size: 120px;
+  }
   .name {
     font-size: 30px;
   }
 	.tagline {
-    font-size: 10px;
+    font-size: 15px;
   }
+	.photo {
+		justify-self: center;
+	}
 }
