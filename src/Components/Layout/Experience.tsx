@@ -7,8 +7,8 @@ export function Experience() {
 		<section id="experience" className={styles.experience}>
 			<h2 className="hidden">Experience</h2>
 			<div className={styles.deck}>
-					<Event {...event} />
 				{experiences.reverse().map(event =>
+					<Event key={event.date} {...event} />
 				)}
 			</div>
 		</section>

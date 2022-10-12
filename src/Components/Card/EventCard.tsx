@@ -13,7 +13,7 @@ export function EventCard(props: Props){
 			<h3>{date}</h3>
 			<ul>
 				{events.map(event =>
-					<li>{event}</li>
+					<li key={event}>{event}</li>
 				)}
 			</ul>
 		</div>

@@ -34,7 +34,7 @@ function Info(props: {details: ProjectProps}){
 			<h3 className={styles.projectTitle}>{details.title}</h3>
 			<div className={styles.tech}>
 				{details.tech.map((tech)=>
-					<Label text={tech} color={techColor.get(tech)} />
+					<Label key={`${details.title}_${tech}`} text={tech} color={techColor.get(tech)} />
 				)}
 			</div>
 			<span className={styles.projectDescription}>{details.description}</span>

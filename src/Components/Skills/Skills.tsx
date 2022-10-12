@@ -64,6 +64,7 @@ export class Skills extends React.PureComponent<any, any> {
 				<div className={styles.deck}>
 					{items.map((item)=>
 						<Card
+							key={item.title}
 							title={item.title}
 							info={item.info}
 							type={item.type}
