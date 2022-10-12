@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.82251b52.chunk.css",
-    "main.js": "/portfolio/static/js/main.4f27be5d.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.4f27be5d.chunk.js.map",
-    "runtime~main.js": "/portfolio/static/js/runtime~main.f308c8e6.js",
-    "runtime~main.js.map": "/portfolio/static/js/runtime~main.f308c8e6.js.map",
-    "static/js/2.c43ddaa0.chunk.js": "/portfolio/static/js/2.c43ddaa0.chunk.js",
-    "static/js/2.c43ddaa0.chunk.js.map": "/portfolio/static/js/2.c43ddaa0.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.2ddc22b3.css",
+    "main.js": "/portfolio/static/js/main.2e5ca115.js",
+    "static/media/pilingImporter.png": "/portfolio/static/media/pilingImporter.f1ec94b4a9a3edd680d4.png",
+    "static/media/pilingAuthoring.png": "/portfolio/static/media/pilingAuthoring.c92c052550625ad8ca3b.png",
+    "static/media/translationPractice.png": "/portfolio/static/media/translationPractice.0a55a885fb6f395dddc5.png",
+    "static/media/markdownPreviewer.png": "/portfolio/static/media/markdownPreviewer.103ad10447979dd5bc17.png",
+    "static/media/techDocPage.png": "/portfolio/static/media/techDocPage.591ec210a7a38f494e55.png",
+    "static/media/photo.jpg": "/portfolio/static/media/photo.b6811f9b1c7ce71e9cdf.jpg",
+    "static/media/10for20challenge.png": "/portfolio/static/media/10for20challenge.af95ba2e27f1cd03fd2e.png",
+    "static/media/todoTimers.png": "/portfolio/static/media/todoTimers.f30d533de2b1997d106a.png",
+    "static/media/pomodoroTimer.png": "/portfolio/static/media/pomodoroTimer.5c4cf9c55d04997b45e1.png",
+    "static/media/quoteMachine.png": "/portfolio/static/media/quoteMachine.bf123d1ac3a9a979ecd0.png",
+    "static/media/kurikaTasks.png": "/portfolio/static/media/kurikaTasks.e5b8deb38a3dec52a06f.png",
+    "static/media/jsCalculator.png": "/portfolio/static/media/jsCalculator.03f523fa893ab672a3e0.png",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.952547130f2b8a026adee70c394ff81c.js": "/portfolio/precache-manifest.952547130f2b8a026adee70c394ff81c.js",
-    "service-worker.js": "/portfolio/service-worker.js",
-    "static/css/main.82251b52.chunk.css.map": "/portfolio/static/css/main.82251b52.chunk.css.map",
-    "static/media/10for20challenge.png": "/portfolio/static/media/10for20challenge.ee8b8c17.png",
-    "static/media/jsCalculator.png": "/portfolio/static/media/jsCalculator.fdbe6ed2.png",
-    "static/media/kurikaTasks.png": "/portfolio/static/media/kurikaTasks.5c8574ed.png",
-    "static/media/markdownPreviewer.png": "/portfolio/static/media/markdownPreviewer.74661f1f.png",
-    "static/media/photo.jpg": "/portfolio/static/media/photo.37baf340.jpg",
-    "static/media/pomodoroTimer.png": "/portfolio/static/media/pomodoroTimer.d857f111.png",
-    "static/media/quoteMachine.png": "/portfolio/static/media/quoteMachine.6879cb7f.png",
-    "static/media/techDocPage.png": "/portfolio/static/media/techDocPage.00857240.png",
-    "static/media/todoTimers.png": "/portfolio/static/media/todoTimers.814fb739.png",
-    "static/media/translationPractice.png": "/portfolio/static/media/translationPractice.ee180aee.png"
-  }
+    "main.2ddc22b3.css.map": "/portfolio/static/css/main.2ddc22b3.css.map",
+    "main.2e5ca115.js.map": "/portfolio/static/js/main.2e5ca115.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ddc22b3.css",
+    "static/js/main.2e5ca115.js"
+  ]
 }
