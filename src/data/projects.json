@@ -1,5 +1,23 @@
 [
   {
+    "title": "PilingJS Authoring Tool",
+    "view": "https://umb-cs410-fritz.github.io/piling.js-authoring/",
+    "codepen": "",
+    "github": "https://github.com/umb-cs410-fritz/piling.js-authoring",
+    "image": "pilingAuthoring",
+    "description": "Easily analyze visual data by creating piles. I added the \"Export\" functionality, allowing a designer to specify settings for an analyst.",
+    "tech": ["Svelte", "CSS", "JavaScript"]
+  },
+  {
+    "title": "PilingJS Importer Demo",
+    "view": "https://umb-cs410-fritz.github.io/piling.js-importer/",
+    "codepen": "",
+    "github": "https://github.com/umb-cs410-fritz/piling.js-importer",
+    "image": "pilingImporter",
+    "description": "A demo analyst tool which demonstrates the ability to import settings obtained from the PilingJS Authoring Tool",
+    "tech": ["Svelte", "CSS", "JavaScript"]
+  },
+  {
     "title": "Translation Practice App",
     "view": "https://thaliak.herokuapp.com/",
     "codepen": "",

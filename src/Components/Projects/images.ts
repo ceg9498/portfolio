@@ -7,6 +7,8 @@ import translationImage from '../../Images/translationPractice.png'
 import todoTimers from '../../Images/todoTimers.png'
 import challenge10for20 from '../../Images/10for20challenge.png'
 import kurikaTasks from '../../Images/kurikaTasks.png'
+import pilingAuthoring from '../../Images/pilingAuthoring.png'
+import pilingImporter from '../../Images/pilingImporter.png'
 
 export const projectImages = {
   pomoImage,
@@ -18,6 +20,8 @@ export const projectImages = {
   todoTimers,
   challenge10for20,
   kurikaTasks,
+  pilingAuthoring,
+  pilingImporter,
 }
 
 export const articleImages = {
