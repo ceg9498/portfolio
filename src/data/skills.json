@@ -43,5 +43,20 @@
 		"title": "IndexedDB",
 		"type": "database",
 		"info": "I use IndexedDB most of my personal projects that require data storage, as long as it doesn't need to be centralized or available anywhere. I like that the data is stored on the client, giving the user more control."
+	 },
+	 {
+		"title": "MySQL",
+		"type": "database",
+		"info": "MySQL is my go-to relational database system."
+	 },
+	 {
+		"title": "PHP",
+		"type": "language",
+		"info": "I picked up PHP in the interest of being able to maintain some older systems."
+	 },
+	 {
+		"title": "Svelte",
+		"type": "framework",
+		"info": "I picked Svelte up for my capstone project at UMass Boston, where I extended an existing open-source project with new features."
 	 }
  ]
