@@ -7,8 +7,8 @@ export function Experience() {
 		<section id="experience" className={styles.experience}>
 			<h2 className="hidden">Experience</h2>
 			<div className={styles.deck}>
-				{experiences.map(event => 
 					<Event {...event} />
+				{experiences.reverse().map(event =>
 				)}
 			</div>
 		</section>
@@ -25,7 +25,7 @@ const experiences = [
 	{
 		date: '2012-2017',
 		events: [
-			"Darkwind Media: QA specialist",
+			"Darkwind Media (acquired by Camouflaj in October 2022): QA specialist",
 		],
 	},
 	{
@@ -55,5 +55,17 @@ const experiences = [
 		events: [
 			"Open Source: submitted my first pull request",
 		]
-	}
+	},
+	{
+		date: '2020-2022',
+		events: [
+			"University of Massachusetts Boston: BS Computer Science",
+		]
+	},
+	{
+		date: 'July 2022 - Present',
+		events: [
+			"Software Engineer Intern at DataOne Software",
+		]
+	},
 ]
