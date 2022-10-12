@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Label.module.css'
 
 interface Props {
-  as?: React.ReactType,
+  as?: any,
   color?: string,
   text: string,
 }
