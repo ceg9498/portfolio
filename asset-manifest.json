@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.2ddc22b3.css",
-    "main.js": "/portfolio/static/js/main.2e5ca115.js",
+    "main.js": "/portfolio/static/js/main.48c63ea3.js",
     "static/media/pilingImporter.png": "/portfolio/static/media/pilingImporter.f1ec94b4a9a3edd680d4.png",
     "static/media/pilingAuthoring.png": "/portfolio/static/media/pilingAuthoring.c92c052550625ad8ca3b.png",
     "static/media/translationPractice.png": "/portfolio/static/media/translationPractice.0a55a885fb6f395dddc5.png",
@@ -16,10 +16,10 @@
     "static/media/jsCalculator.png": "/portfolio/static/media/jsCalculator.03f523fa893ab672a3e0.png",
     "index.html": "/portfolio/index.html",
     "main.2ddc22b3.css.map": "/portfolio/static/css/main.2ddc22b3.css.map",
-    "main.2e5ca115.js.map": "/portfolio/static/js/main.2e5ca115.js.map"
+    "main.48c63ea3.js.map": "/portfolio/static/js/main.48c63ea3.js.map"
   },
   "entrypoints": [
     "static/css/main.2ddc22b3.css",
-    "static/js/main.2e5ca115.js"
+    "static/js/main.48c63ea3.js"
   ]
 }
