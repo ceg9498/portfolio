@@ -1,6 +1,6 @@
 import React from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faLinkedin, faGithubSquare, faTwitterSquare} from '@fortawesome/free-brands-svg-icons'
+import {faLinkedin, faGithubSquare} from '@fortawesome/free-brands-svg-icons'
 
 export function Navbar(){
   return(
@@ -29,12 +29,6 @@ export function Navbar(){
           <a href="https://github.com/ceg9498" id="github-profile-link" className="profile-link"
             target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithubSquare} />
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/ceg9498" id="twitter-profile-link" className="profile-link"
-            target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTwitterSquare} />
           </a>
         </li>
       </ul>
