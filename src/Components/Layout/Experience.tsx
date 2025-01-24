@@ -65,7 +65,11 @@ const experiences = [
 	{
 		date: 'July 2022 - Present',
 		events: [
-			"Software Engineer Intern at DataOne Software",
+			"Software Developer at DataOne Software",
+			"Started as a summer Intern",
+			"Worked part-time during Fall semester",
+			"Started a full-time Software Developer I position in January 2023",
+			"Promoted to Software Developer II in May 2024"
 		]
 	},
 ]
